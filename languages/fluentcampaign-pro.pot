@@ -1,0 +1,2061 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FluentCRM Pro\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-20 12:53+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.2; wp-5.7\n"
+"X-Domain: fluentcampaign-pro"
+
+#: app/Http/Controllers/CampaignsProController.php:37
+#, php-format
+msgid "%d Emails has been scheduled to resend"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/LearnDashCoursePurchased.php:21
+msgid "[LearnDash] Check if the contact enroll a course"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/LearnDashCoursePurchased.php:34
+msgid "[LearnDash] Check if the contact enroll or completed a course"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/LearnDashIsInGroup.php:21
+#: app/Services/Integrations/LearnDash/LearnDashIsInGroup.php:34
+msgid "[LearnDash] Check if the contact is in a group"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterCoursePurchased.php:35
+msgid "[LifterLMS] Check if the contact enroll or completed a course"
+msgstr ""
+
+#: app/Services/Integrations/PMPro/PMProIsInMembership.php:21
+#: app/Services/Integrations/PMPro/PMProIsInMembership.php:34
+msgid "[PMPro] Check if the contact is in a Membership Level"
+msgstr ""
+
+#: app/Services/Integrations/RCP/RCPIsInMembership.php:21
+#: app/Services/Integrations/RCP/RCPIsInMembership.php:34
+msgid "[RCP] Check if the contact is in a Membership Level"
+msgstr ""
+
+#: app/Services/Integrations/TutorLms/TutorCoursePurchased.php:21
+msgid "[TutorLMS] Check if the contact enroll a course"
+msgstr ""
+
+#: app/Services/Integrations/TutorLms/TutorCoursePurchased.php:34
+msgid "[TutorLMS] Check if the contact enrolled a course"
+msgstr ""
+
+#: app/Services/Integrations/WishlistMember/WishlishIsInLevel.php:21
+#: app/Services/Integrations/WishlistMember/WishlishIsInLevel.php:34
+msgid "[WishList Member] Check if the contact is in a Membership Level"
+msgstr ""
+
+#: app/Services/Integrations/RCP/RCPMembershipTrigger.php:24
+#: app/Services/Integrations/RCP/RCPMembershipTrigger.php:39
+#: app/Services/Integrations/WishlistMember/WishlistMembershipTrigger.php:24
+#: app/Services/Integrations/WishlistMember/WishlistMembershipTrigger.php:39
+#: app/Services/Integrations/MemberPress/MembershipTrigger.php:24
+#: app/Services/Integrations/MemberPress/MembershipTrigger.php:39
+msgid "A member added to a membership level"
+msgstr ""
+
+#: app/Services/Integrations/MemberPress/SubscriptionExpiredTrigger.php:24
+#: app/Services/Integrations/MemberPress/SubscriptionExpiredTrigger.php:39
+msgid "A Subscription expired"
+msgstr ""
+
+#: app/Services/DynamicSegments/AffiliateWPSegment.php:20
+msgid "Active Affiliates (AffiliateWP)"
+msgstr ""
+
+#: app/Services/DynamicSegments/AffiliateWPSegment.php:21
+msgid "Active Affiliates who are also in the contact list as subscribed"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:123
+msgid ""
+"Activity on your site login, email link click or various other activities"
+msgstr ""
+
+#: app/Services/Funnel/Actions/AddActivityAction.php:57
+msgid "Activity Title"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/AddOrderNoteAction.php:23
+#: app/Services/Integrations/WooCommerce/AddOrderNoteAction.php:49
+msgid "Add Note to WooCommerce Order"
+msgstr ""
+
+#: app/Services/Funnel/Actions/AddActivityAction.php:25
+msgid "Add Notes & Activity"
+msgstr ""
+
+#: app/Services/Funnel/Actions/AddActivityAction.php:47
+msgid "Add Notes or Activity to Contact"
+msgstr ""
+
+#: app/Services/Funnel/Actions/AddActivityAction.php:26
+#: app/Services/Funnel/Actions/AddActivityAction.php:48
+msgid "Add Notes or Activity to the Contact Profile"
+msgstr ""
+
+#: app/Services/Integrations/ElementorFormIntegration/FormWidget.php:86
+msgid "Add Only"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/AddOrderNoteAction.php:22
+#: app/Services/Integrations/WooCommerce/AddOrderNoteAction.php:48
+msgid "Add Order Note"
+msgstr ""
+
+#: app/Http/Controllers/CampaignsProController.php:29
+msgid "Added to resend from failed"
+msgstr ""
+
+#: app/Hooks/Handlers/DataExporter.php:192
+msgid "Address Line 1"
+msgstr ""
+
+#: app/Hooks/Handlers/DataExporter.php:193
+msgid "Address Line 2"
+msgstr ""
+
+#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:24
+msgid "AffiliateWP - New Affiliate Approved/Active Register"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterCoursePurchased.php:48
+msgid "Also check if the contact completed the course or not."
+msgstr ""
+
+#: app/Services/Integrations/RCP/RCPMembershipTrigger.php:51
+#: app/Services/Integrations/RCP/RCPMembershipCancelTrigger.php:51
+#: app/Services/Integrations/LifterLms/LessonCompletedTrigger.php:55
+#: app/Services/Integrations/LifterLms/CourseCompletedTrigger.php:51
+#: app/Services/Integrations/LifterLms/CourseEnrollTrigger.php:55
+#: app/Services/Integrations/LifterLms/MembershipEnrollTrigger.php:55
+#: app/Services/Integrations/WooCommerce/WooOrderCompletedTrigger.php:52
+#: app/Services/Integrations/WooCommerce/WooOrderStatusChangeTrigger.php:52
+#: app/Services/Integrations/WooCommerce/WooOrderRefundedTrigger.php:52
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessTrigger.php:54
+#: app/Services/Integrations/PMPro/PMProPMProMembershipTrigger.php:51
+#: app/Services/Integrations/PMPro/PMProPMProCancelLevelTrigger.php:51
+#: app/Services/Integrations/LearnDash/GroupEnrollTrigger.php:51
+#: app/Services/Integrations/LearnDash/TopicCompletedTrigger.php:51
+#: app/Services/Integrations/LearnDash/LessonCompletedTrigger.php:51
+#: app/Services/Integrations/LearnDash/CourseCompletedTrigger.php:51
+#: app/Services/Integrations/LearnDash/CourseEnrollTrigger.php:53
+#: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:51
+#: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:52
+#: app/Services/Integrations/WishlistMember/WishlistMembershipTrigger.php:51
+#: app/Services/Integrations/TutorLms/CourseCompletedTrigger.php:51
+#: app/Services/Integrations/TutorLms/CourseEnrollTrigger.php:51
+#: app/Services/Integrations/MemberPress/MembershipTrigger.php:51
+#: app/Services/Integrations/MemberPress/SubscriptionExpiredTrigger.php:51
+#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:51
+#: app/Services/Funnel/Triggers/UserLoginTrigger.php:45
+msgid "An Automated double-optin email will be sent for new subscribers"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderStatusChangeTrigger.php:78
+msgid "Any"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/Helper.php:51
+#: app/Services/Integrations/Edd/Helper.php:53
+msgid "Any type of purchase"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterInit.php:213
+msgid "Apply Tags on Course Completed"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterInit.php:170
+#: app/Services/Integrations/TutorLms/TutorLmsInit.php:140
+msgid "Apply Tags on course completion"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterInit.php:157
+#: app/Services/Integrations/TutorLms/TutorLmsInit.php:126
+msgid "Apply Tags on course enrollment"
+msgstr ""
+
+#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:48
+msgid "Assign to Lists"
+msgstr ""
+
+#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:55
+msgid "Assign to Tags"
+msgstr ""
+
+#: app/Http/Controllers/ManagerController.php:135
+msgid "Associate user could not be found"
+msgstr ""
+
+#: app/Http/Controllers/ManagerController.php:62
+#: app/Http/Controllers/ManagerController.php:103
+msgid "Associate user could not be found with this email"
+msgstr ""
+
+#: app/Services/Funnel/Actions/RemoveFromFunnelAction.php:23
+#: app/Services/Funnel/Actions/RemoveFromFunnelAction.php:36
+msgid "Cancel Automations"
+msgstr ""
+
+#: app/Services/Funnel/Actions/RemoveFromEmailSequenceAction.php:22
+msgid "Cancel Sequence Emails"
+msgstr ""
+
+#: app/Services/Funnel/Actions/RemoveFromEmailSequenceAction.php:23
+msgid "Cancel Sequence Emails for the contact"
+msgstr ""
+
+#: app/Services/Funnel/Actions/ChangeUserRoleAction.php:38
+msgid "Change connected user role"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/OrderStatusChangeAction.php:22
+#: app/Services/Integrations/WooCommerce/OrderStatusChangeAction.php:44
+msgid "Change Order Status"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/OrderStatusChangeAction.php:23
+#: app/Services/Integrations/WooCommerce/OrderStatusChangeAction.php:45
+msgid "Change status of the current order in WooCommerce"
+msgstr ""
+
+#: app/Services/Funnel/Actions/ChangeUserRoleAction.php:37
+msgid "Change User Role"
+msgstr ""
+
+#: app/Services/Funnel/Actions/ChangeUserRoleAction.php:23
+msgid "Change WP User Role"
+msgstr ""
+
+#: app/Services/Funnel/Conditions/CheckUserPropCondition.php:22
+#: app/Services/Funnel/Conditions/CheckUserPropCondition.php:47
+msgid "Check Contact's Properties"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooConditions.php:43
+msgid "Check customer / Order properties"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterCoursePurchased.php:21
+msgid "Check if the contact enroll a course"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterHasMembership.php:21
+#: app/Services/Integrations/LifterLms/LifterHasMembership.php:35
+msgid "Check if the contact has a Membership"
+msgstr ""
+
+#: app/Services/Funnel/Conditions/HasListCondition.php:22
+#: app/Services/Funnel/Conditions/HasListCondition.php:34
+msgid "Check If the contact has specific lists"
+msgstr ""
+
+#: app/Services/Funnel/Conditions/HasTagCondition.php:22
+#: app/Services/Funnel/Conditions/HasTagCondition.php:34
+msgid "Check If the contact has specific tags"
+msgstr ""
+
+#: app/Services/Funnel/Conditions/HasUserRole.php:23
+#: app/Services/Funnel/Conditions/HasUserRole.php:35
+#: app/Services/Funnel/Conditions/HasUserRole.php:36
+msgid "Check If the contact has specific user role"
+msgstr ""
+
+#: app/Services/Funnel/Conditions/CheckUserPropCondition.php:23
+#: app/Services/Funnel/Conditions/CheckUserPropCondition.php:48
+msgid "Check If the contact match specific data properties"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooPurchased.php:34
+#: app/Services/Integrations/WooCommerce/WooConditions.php:85
+#: app/Services/Integrations/Edd/EddPurchased.php:21
+#: app/Services/Integrations/Edd/EddPurchased.php:34
+msgid "Check if the contact purchased a specific product"
+msgstr ""
+
+#: app/Services/Integrations/RCP/RCPIsInMembership.php:22
+#: app/Services/Integrations/RCP/RCPIsInMembership.php:35
+#: app/Services/Integrations/PMPro/PMProIsInMembership.php:22
+#: app/Services/Integrations/PMPro/PMProIsInMembership.php:35
+#: app/Services/Integrations/WishlistMember/WishlishIsInLevel.php:22
+#: app/Services/Integrations/WishlistMember/WishlishIsInLevel.php:35
+msgid "Check If user in a membership level and run sequences conditionally"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooPurchased.php:22
+#: app/Services/Integrations/WooCommerce/WooPurchased.php:35
+#: app/Services/Integrations/WooCommerce/WooConditions.php:86
+#: app/Services/Integrations/Edd/EddPurchased.php:22
+#: app/Services/Integrations/Edd/EddPurchased.php:35
+msgid ""
+"Check If user purchased selected products and run sequences conditionally"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:83
+#: app/Hooks/Handlers/DataExporter.php:195
+#: app/Services/Funnel/Conditions/CheckUserPropCondition.php:104
+msgid "City"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/CourseCompletedTrigger.php:24
+#: app/Services/Integrations/LearnDash/CourseCompletedTrigger.php:39
+msgid "Completes a Course"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/LessonCompletedTrigger.php:24
+#: app/Services/Integrations/LearnDash/LessonCompletedTrigger.php:39
+msgid "Completes a Lesson"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/TopicCompletedTrigger.php:24
+#: app/Services/Integrations/LearnDash/TopicCompletedTrigger.php:39
+msgid "Completes a Topic"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooConditions.php:98
+#: app/Services/Funnel/Conditions/CheckUserPropCondition.php:58
+msgid "Condition"
+msgstr ""
+
+#: app/Services/Integrations/TutorLms/TutorCoursePurchased.php:35
+msgid "Conditionally check if contact enrolled a course"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterCoursePurchased.php:22
+#: app/Services/Integrations/LifterLms/LifterCoursePurchased.php:36
+#: app/Services/Integrations/LearnDash/LearnDashCoursePurchased.php:22
+#: app/Services/Integrations/LearnDash/LearnDashCoursePurchased.php:35
+#: app/Services/Integrations/TutorLms/TutorCoursePurchased.php:22
+msgid "Conditionally check if contact enrolled or completed a course"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterHasMembership.php:22
+#: app/Services/Integrations/LifterLms/LifterHasMembership.php:36
+msgid "Conditionally check if contact has an active membership level"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/LearnDashIsInGroup.php:22
+#: app/Services/Integrations/LearnDash/LearnDashIsInGroup.php:35
+msgid "Conditionally check if contact is in a group"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:60
+msgid "Conditions"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooConditions.php:90
+msgid "Configure Conditions"
+msgstr ""
+
+#: app/Services/Integrations/CRM/ListAppliedTrigger.php:64
+msgid "contact added in all of the selected lists"
+msgstr ""
+
+#: app/Services/Integrations/CRM/TagAppliedTrigger.php:64
+msgid "contact added in all of the selected tags"
+msgstr ""
+
+#: app/Services/Integrations/CRM/ListAppliedTrigger.php:60
+msgid "contact added in any of the selected lists"
+msgstr ""
+
+#: app/Services/Integrations/CRM/TagAppliedTrigger.php:60
+msgid "contact added in any of the selected tags"
+msgstr ""
+
+#: app/Services/Funnel/Conditions/CheckUserPropCondition.php:57
+msgid "Contact Data"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:65
+msgid "Contact Email"
+msgstr ""
+
+#: app/Services/Funnel/Actions/UpdateContactPropertyAction.php:47
+msgid "Contact Property"
+msgstr ""
+
+#: app/Services/Funnel/Actions/UpdateContactPropertyAction.php:186
+msgid "Contact Source"
+msgstr ""
+
+#: app/Hooks/Handlers/DataExporter.php:201
+#: app/Services/Funnel/Conditions/CheckUserPropCondition.php:118
+#: app/Services/Funnel/Actions/UpdateContactPropertyAction.php:181
+msgid "Contact Type"
+msgstr ""
+
+#: app/Services/Funnel/Benchmarks/LinkClickBenchmark.php:65
+msgid "Contacts will be redirected to this link."
+msgstr ""
+
+#: app/Services/Funnel/Benchmarks/LinkClickBenchmark.php:56
+msgid "Copy This Link"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:97
+#: app/Hooks/Handlers/DataExporter.php:197
+#: app/Services/Integrations/WooCommerce/WooConditions.php:157
+#: app/Services/Funnel/Conditions/CheckUserPropCondition.php:112
+#: app/Services/Funnel/Actions/UpdateContactPropertyAction.php:191
+msgid "Country"
+msgstr ""
+
+#: app/Services/Funnel/Actions/UserRegistrationAction.php:45
+msgid "Create WordPress User"
+msgstr ""
+
+#: app/Services/Funnel/Actions/UserRegistrationAction.php:23
+msgid "Create WP User"
+msgstr ""
+
+#: app/Services/Funnel/Actions/UserRegistrationAction.php:24
+#: app/Services/Funnel/Actions/UserRegistrationAction.php:46
+msgid ""
+"Create WP User with a role if user is not already registered with contact "
+"email"
+msgstr ""
+
+#: app/Hooks/Handlers/DataExporter.php:205
+#: app/Hooks/Handlers/DataExporter.php:206
+msgid "Created At"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:117
+msgid "Created at"
+msgstr ""
+
+#: app/Services/DynamicSegments/CustomSegment.php:48
+msgid "Custom Segments with custom filters on Subscriber data"
+msgstr ""
+
+#: app/Hooks/Handlers/DataExporter.php:203
+msgid "Date Of Birth"
+msgstr ""
+
+#: app/Services/Funnel/Actions/AddActivityAction.php:61
+msgid "Description"
+msgstr ""
+
+#: app/Services/Integrations/ElementorFormIntegration/FormWidget.php:97
+msgid "Double Opt-in"
+msgstr ""
+
+#: app/Services/DynamicSegments/EddActiveCustomerSegment.php:20
+msgid "Easy Digital Downloads Customers"
+msgstr ""
+
+#: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:24
+msgid "Edd - New Order Success"
+msgstr ""
+
+#: app/Services/DynamicSegments/EddActiveCustomerSegment.php:21
+msgid "EDD customers who are also in the contact list as subscribed"
+msgstr ""
+
+#: app/Hooks/Handlers/DataExporter.php:190
+#: app/Services/Funnel/Conditions/CheckUserPropCondition.php:100
+msgid "Email"
+msgstr ""
+
+#: app/Http/Controllers/CampaignsProController.php:80
+msgid "Email has been resent"
+msgstr ""
+
+#: app/Http/Controllers/SequenceController.php:175
+#: app/Http/Controllers/SequenceMailController.php:113
+msgid "Email sequence successfully deleted"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:158
+msgid "Enable Last Email Activity Filter"
+msgstr ""
+
+#: app/Services/Funnel/Actions/EndFunnel.php:23
+#: app/Services/Funnel/Actions/EndFunnel.php:35
+msgid "End This Funnel Here"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/CourseEnrollTrigger.php:28
+#: app/Services/Integrations/TutorLms/CourseEnrollTrigger.php:24
+msgid "Enrollment in a course"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/CourseEnrollTrigger.php:43
+msgid "Enrollment in a course in LifterLMS"
+msgstr ""
+
+#: app/Services/Integrations/TutorLms/CourseEnrollTrigger.php:39
+msgid "Enrollment in a course in TutorLMS"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/MembershipEnrollTrigger.php:28
+msgid "Enrollment in a Membership"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/MembershipEnrollTrigger.php:43
+msgid "Enrollment in a Membership in LifterLMS"
+msgstr ""
+
+#: app/Services/Integrations/PMPro/PMProPMProMembershipTrigger.php:39
+msgid "Enrollment in a Membership Level in PMPro"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/CourseEnrollTrigger.php:24
+#: app/Services/Integrations/LearnDash/CourseEnrollTrigger.php:41
+msgid "Enrolls in a Course"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/GroupEnrollTrigger.php:24
+#: app/Services/Integrations/LearnDash/GroupEnrollTrigger.php:39
+msgid "Enrolls in a Group"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:153
+msgid "Filter By Email Activities"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:154
+msgid ""
+"Filter your contacts by from email open or email link click metrics. Leave "
+"the values blank for not applying"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:71
+#: app/Hooks/Handlers/DataExporter.php:188
+#: app/Services/Funnel/Conditions/CheckUserPropCondition.php:92
+msgid "First Name"
+msgstr ""
+
+#. Author of the plugin
+msgid "Fluent CRM"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooProductAdmin.php:53
+#: app/Services/Integrations/ElementorFormIntegration/FormWidget.php:31
+#: app/Services/Integrations/ElementorFormIntegration/FormWidget.php:39
+msgid "FluentCRM"
+msgstr ""
+
+#: app/Services/Integrations/TutorLms/TutorLmsInit.php:103
+msgid "FluentCRM - Course Tags"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooProductAdmin.php:85
+msgid "FluentCRM Integration"
+msgstr ""
+
+#. Name of the plugin
+msgid "FluentCRM Pro"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooInit.php:140
+#: app/Services/Integrations/Edd/EddInit.php:113
+msgid "FluentCRM Profile"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessBenchmark.php:74
+#: app/Services/Integrations/Edd/EddOrderSuccessBenchmark.php:71
+msgid "For what type of purchase you want to run this benchmark"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderCompletedTrigger.php:97
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessTrigger.php:99
+#: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:101
+#: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:102
+msgid "For what type of purchase you want to run this funnel"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/Helper.php:59
+#: app/Services/Integrations/Edd/Helper.php:61
+msgid "From 2nd Purchase"
+msgstr ""
+
+#: app/Services/Funnel/Actions/UserRegistrationAction.php:56
+msgid "Generate Password Automatically"
+msgstr ""
+
+#: app/Services/Funnel/Conditions/HasListCondition.php:21
+msgid "Has in Selected Lists"
+msgstr ""
+
+#: app/Services/Funnel/Conditions/HasTagCondition.php:21
+msgid "Has in Selected tags"
+msgstr ""
+
+#: app/Services/Funnel/Conditions/HasUserRole.php:22
+msgid "Has User Role"
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://fluentcrm.com"
+msgstr ""
+
+#: app/Hooks/Handlers/DataExporter.php:185
+msgid "ID"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooConditions.php:97
+msgid "IF"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterCoursePurchased.php:43
+#: app/Services/Integrations/LearnDash/LearnDashCoursePurchased.php:42
+#: app/Services/Integrations/TutorLms/TutorCoursePurchased.php:42
+msgid ""
+"If any of the courses has been enrolled by the contact it will result as YES"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/LearnDashIsInGroup.php:42
+msgid ""
+"If any of the groups has been enrolled by the contact it will result as YES"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooPurchased.php:42
+#: app/Services/Integrations/Edd/EddPurchased.php:42
+msgid ""
+"If any of the product has been purchased by the contact it will result as YES"
+msgstr ""
+
+#: app/Services/Funnel/Conditions/HasListCondition.php:44
+msgid ""
+"If any of the selected lists found in that contact then it will be as \"Yes\""
+msgstr ""
+
+#: app/Services/Funnel/Conditions/HasTagCondition.php:44
+msgid ""
+"If any of the selected tags found in that contact then it will be as \"Yes\""
+msgstr ""
+
+#: app/Services/Funnel/Conditions/HasUserRole.php:43
+msgid ""
+"If any of the selected user roles found in that contact then it will be as "
+"\"Yes\""
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LessonCompletedTrigger.php:79
+#: app/Services/Integrations/LifterLms/CourseCompletedTrigger.php:75
+#: app/Services/Integrations/LifterLms/CourseEnrollTrigger.php:80
+#: app/Services/Integrations/LifterLms/MembershipEnrollTrigger.php:80
+#: app/Services/Integrations/PMPro/PMProPMProMembershipTrigger.php:76
+#: app/Services/Integrations/LearnDash/GroupEnrollTrigger.php:76
+#: app/Services/Integrations/LearnDash/TopicCompletedTrigger.php:77
+#: app/Services/Integrations/LearnDash/LessonCompletedTrigger.php:76
+#: app/Services/Integrations/LearnDash/CourseCompletedTrigger.php:75
+#: app/Services/Integrations/LearnDash/CourseEnrollTrigger.php:78
+#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:82
+#: app/Services/Integrations/TutorLms/CourseCompletedTrigger.php:75
+#: app/Services/Integrations/TutorLms/CourseEnrollTrigger.php:76
+#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:74
+msgid "If Contact Already Exist?"
+msgstr ""
+
+#: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:78
+#: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:79
+msgid "If Contact Exist?"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterHasMembership.php:43
+msgid ""
+"If the contact is in any of the membership levels (active) then it will "
+"result as YES"
+msgstr ""
+
+#: app/Services/Integrations/RCP/RCPIsInMembership.php:42
+#: app/Services/Integrations/PMPro/PMProIsInMembership.php:42
+#: app/Services/Integrations/WishlistMember/WishlishIsInLevel.php:42
+msgid ""
+"If the contact is in any of the selected levels then the result will be as "
+"YES"
+msgstr ""
+
+#: app/Services/Funnel/Actions/ChangeUserRoleAction.php:24
+msgid "If user exist with the contact email then you can change user role"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterCoursePurchased.php:49
+msgid ""
+"If you enable this then the course need to completed by the contact to "
+"result as \"YES\""
+msgstr ""
+
+#: app/Services/FunnelMultiConditionTrait.php:21
+#: app/Services/Integrations/RCP/RCPMembershipTrigger.php:84
+#: app/Services/Integrations/RCP/RCPMembershipCancelTrigger.php:84
+#: app/Services/Integrations/LifterLms/CourseEnrollTrigger.php:95
+#: app/Services/Integrations/LifterLms/MembershipEnrollTrigger.php:95
+#: app/Services/Integrations/WooCommerce/WooOrderCompletedTrigger.php:103
+#: app/Services/Integrations/WooCommerce/WooOrderStatusChangeTrigger.php:105
+#: app/Services/Integrations/WooCommerce/WooOrderRefundedTrigger.php:95
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessTrigger.php:105
+#: app/Services/Integrations/PMPro/PMProPMProMembershipTrigger.php:91
+#: app/Services/Integrations/PMPro/PMProPMProCancelLevelTrigger.php:84
+#: app/Services/Integrations/LearnDash/GroupEnrollTrigger.php:91
+#: app/Services/Integrations/LearnDash/CourseEnrollTrigger.php:93
+#: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:107
+#: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:108
+#: app/Services/Integrations/WishlistMember/WishlistMembershipTrigger.php:84
+#: app/Services/Integrations/TutorLms/CourseEnrollTrigger.php:91
+#: app/Services/Integrations/MemberPress/MembershipTrigger.php:84
+#: app/Services/Integrations/MemberPress/SubscriptionExpiredTrigger.php:84
+#: app/Services/Funnel/Triggers/UserLoginTrigger.php:85
+msgid ""
+"If you enable, then it will restart the automation for a contact if the "
+"contact already in the automation. Otherwise, It will just skip if already "
+"exist"
+msgstr ""
+
+#: app/Http/Controllers/CampaignsProController.php:159
+msgid "invalid selection"
+msgstr ""
+
+#: app/Hooks/Handlers/DataExporter.php:198
+msgid "IP Address"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:164
+#: app/Http/Controllers/DynamicSegmentController.php:170
+msgid "Keep days 0/Blank for disable"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderCompletedTrigger.php:90
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessBenchmark.php:67
+#: app/Services/Integrations/WooCommerce/WooOrderRefundedTrigger.php:89
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessTrigger.php:92
+#: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:94
+#: app/Services/Integrations/Edd/EddOrderSuccessBenchmark.php:64
+#: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:95
+msgid "Keep it blank to run to any category products"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/CourseEnrollTrigger.php:89
+#: app/Services/Integrations/LearnDash/CourseEnrollTrigger.php:87
+#: app/Services/Integrations/TutorLms/CourseCompletedTrigger.php:84
+#: app/Services/Integrations/TutorLms/CourseEnrollTrigger.php:85
+msgid "Keep it blank to run to any Course Enrollment"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/GroupEnrollTrigger.php:85
+msgid "Keep it blank to run to any group Enrollment"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LessonCompletedTrigger.php:89
+#: app/Services/Integrations/LifterLms/CourseCompletedTrigger.php:85
+#: app/Services/Integrations/LearnDash/CourseCompletedTrigger.php:85
+#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:92
+msgid "Keep it blank to run to any Lesson"
+msgstr ""
+
+#: app/Services/Integrations/RCP/RCPMembershipCancelTrigger.php:78
+msgid "Keep it blank to run to any Level Cancellation"
+msgstr ""
+
+#: app/Services/Integrations/PMPro/PMProPMProCancelLevelTrigger.php:78
+msgid "Keep it blank to run to any Level cancellation"
+msgstr ""
+
+#: app/Services/Integrations/RCP/RCPMembershipTrigger.php:78
+#: app/Services/Integrations/PMPro/PMProPMProMembershipTrigger.php:85
+#: app/Services/Integrations/WishlistMember/WishlistMembershipTrigger.php:78
+#: app/Services/Integrations/MemberPress/MembershipTrigger.php:78
+msgid "Keep it blank to run to any Level Enrollment"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/MembershipEnrollTrigger.php:89
+msgid "Keep it blank to run to any Membership"
+msgstr ""
+
+#: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:88
+msgid "Keep it blank to run to any product"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderCompletedTrigger.php:82
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessBenchmark.php:59
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessTrigger.php:84
+#: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:87
+#: app/Services/Integrations/Edd/EddOrderSuccessBenchmark.php:57
+msgid "Keep it blank to run to any product purchase"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderRefundedTrigger.php:81
+msgid "Keep it blank to run to any product refund"
+msgstr ""
+
+#: app/Services/Integrations/MemberPress/SubscriptionExpiredTrigger.php:78
+msgid "Keep it blank to run to any subscription cancellation"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/TopicCompletedTrigger.php:101
+msgid "Keep it blank to run to any Topic for that lesson"
+msgstr ""
+
+#: app/Hooks/Handlers/DataExporter.php:204
+msgid "Last Activity"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:122
+msgid "Last Contact Activity"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:168
+msgid "Last Email Link Clicked"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:162
+msgid "Last Email Open"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:77
+#: app/Hooks/Handlers/DataExporter.php:189
+#: app/Services/Funnel/Conditions/CheckUserPropCondition.php:96
+msgid "Last Name"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/LessonCompletedTrigger.php:93
+msgid "Leave empty to target any lesson of this course"
+msgstr ""
+
+#: app/Services/Funnel/Benchmarks/LinkClickBenchmark.php:35
+#: app/Services/Funnel/Benchmarks/LinkClickBenchmark.php:50
+msgid "Link Click"
+msgstr ""
+
+#: app/Http/Controllers/CampaignsProController.php:114
+msgid "Links are required"
+msgstr ""
+
+#: app/Services/Integrations/CRM/ListAppliedTrigger.php:28
+#: app/Services/Integrations/CRM/ListAppliedTrigger.php:44
+msgid "List Applied"
+msgstr ""
+
+#: app/Services/Integrations/CRM/RemoveFromListTrigger.php:29
+msgid "List Removed"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:140
+#: app/Hooks/Handlers/DataExporter.php:207
+msgid "Lists"
+msgstr ""
+
+#: app/Http/Controllers/ManagerController.php:84
+msgid "Manager has been added"
+msgstr ""
+
+#: app/Http/Controllers/ManagerController.php:144
+msgid "Manager has been removed"
+msgstr ""
+
+#: app/Http/Controllers/ManagerController.php:124
+msgid "Manager has been updated"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:177
+msgid "Match Any One Condition"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:176
+msgid "Match Both Open and Click Condition"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:173
+msgid "Match Type"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooConditions.php:99
+#: app/Services/Funnel/Conditions/CheckUserPropCondition.php:59
+msgid "Match Value"
+msgstr ""
+
+#: app/Services/Integrations/RCP/RCPMembershipCancelTrigger.php:24
+msgid "Membership cancelled"
+msgstr ""
+
+#: app/Services/Integrations/RCP/RCPMembershipCancelTrigger.php:39
+msgid "Membership is cancelled"
+msgstr ""
+
+#: app/Services/Integrations/PMPro/PMProPMProMembershipTrigger.php:24
+msgid "Membership Level assignment of a User"
+msgstr ""
+
+#: app/Services/Integrations/PMPro/PMProPMProCancelLevelTrigger.php:24
+#: app/Services/Integrations/PMPro/PMProPMProCancelLevelTrigger.php:39
+msgid "Membership Level Expiration"
+msgstr ""
+
+#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:39
+msgid "New Affiliate Approved/Active Register"
+msgstr ""
+
+#: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:39
+msgid "New Edd Order (paid) has been places"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessTrigger.php:27
+msgid "New Order (Processing)"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/AddOrderNoteAction.php:59
+msgid "New Order Status"
+msgstr ""
+
+#: app/Services/Integrations/Edd/EddOrderSuccessBenchmark.php:24
+msgid "New Order Success"
+msgstr ""
+
+#: app/Services/Integrations/Edd/EddOrderSuccessBenchmark.php:49
+msgid "New Order Success in EDD"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessTrigger.php:42
+msgid "New WooCommerce Order (Processing) has been places"
+msgstr ""
+
+#: app/Services/Funnel/Actions/EndFunnel.php:24
+msgid "No further action will run once a contact hit this point"
+msgstr ""
+
+#: app/Services/Integrations/ElementorFormIntegration/FormWidget.php:87
+msgid "Only add new contacts, don't update existing ones."
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/Helper.php:55
+#: app/Services/Integrations/Edd/Helper.php:57
+msgid "Only for first purchase"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderCompletedTrigger.php:25
+msgid "Order Completed"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/AddOrderNoteAction.php:54
+msgid "Order Note"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessBenchmark.php:25
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessBenchmark.php:50
+msgid "Order Received in WooCommerce"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderRefundedTrigger.php:25
+msgid "Order Refunded"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderStatusChangeTrigger.php:25
+msgid "Order Status Changed"
+msgstr ""
+
+#: app/Services/Funnel/Actions/HTTPSendDataAction.php:26
+msgid "Outgoing Webhook"
+msgstr ""
+
+#: app/Services/DynamicSegments/PMProMembersSegment.php:21
+msgid "Paid Membership Members"
+msgstr ""
+
+#: app/Services/DynamicSegments/PMProMembersSegment.php:22
+msgid ""
+"Paid Membership Members customers who are also in the contact list as "
+"subscribed"
+msgstr ""
+
+#: app/Services/Funnel/Benchmarks/LinkClickBenchmark.php:59
+msgid ""
+"Paste this link in any email or page. When a contact click this link then it "
+"will be recorded and redirect to the url as provided bellow."
+msgstr ""
+
+#: app/Services/Funnel/Actions/RemoveFromFunnelAction.php:24
+msgid "Pause/Cancel another automation for contact"
+msgstr ""
+
+#: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:25
+msgid "Payment Refunded"
+msgstr ""
+
+#: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:40
+msgid "Payment Refunded in EDD"
+msgstr ""
+
+#: app/Hooks/Handlers/DataExporter.php:199
+msgid "Phone"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:219
+#: app/Http/Controllers/DynamicSegmentController.php:247
+msgid "Please provide segment title"
+msgstr ""
+
+#: app/Services/Funnel/Benchmarks/LinkClickBenchmark.php:66
+msgid "Please provide the url to where the contact will be redirected"
+msgstr ""
+
+#: app/Services/Funnel/Benchmarks/LinkClickBenchmark.php:55
+msgid "Please save to get the sharable link"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LessonCompletedTrigger.php:80
+#: app/Services/Integrations/LifterLms/CourseCompletedTrigger.php:76
+#: app/Services/Integrations/LifterLms/CourseEnrollTrigger.php:81
+#: app/Services/Integrations/LifterLms/MembershipEnrollTrigger.php:81
+#: app/Services/Integrations/PMPro/PMProPMProMembershipTrigger.php:77
+#: app/Services/Integrations/LearnDash/GroupEnrollTrigger.php:77
+#: app/Services/Integrations/LearnDash/TopicCompletedTrigger.php:78
+#: app/Services/Integrations/LearnDash/LessonCompletedTrigger.php:77
+#: app/Services/Integrations/LearnDash/CourseCompletedTrigger.php:76
+#: app/Services/Integrations/LearnDash/CourseEnrollTrigger.php:79
+#: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:79
+#: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:80
+#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:83
+#: app/Services/Integrations/TutorLms/CourseCompletedTrigger.php:76
+#: app/Services/Integrations/TutorLms/CourseEnrollTrigger.php:77
+#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:75
+msgid ""
+"Please specify what will happen if the subscriber already exist in the "
+"database"
+msgstr ""
+
+#: app/Hooks/Handlers/DataExporter.php:194
+msgid "Postal Code"
+msgstr ""
+
+#. Description of the plugin
+msgid "Pro Email Automation and Integration Addon for FluentCRM"
+msgstr ""
+
+#: app/Services/Funnel/Actions/UpdateContactPropertyAction.php:48
+msgid "Property Value"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderCompletedTrigger.php:94
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessBenchmark.php:71
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessTrigger.php:96
+#: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:98
+#: app/Services/Integrations/Edd/EddOrderSuccessBenchmark.php:68
+#: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:99
+msgid "Purchase Type"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooPurchased.php:21
+msgid "Purchased a specific product or not"
+msgstr ""
+
+#: app/Services/Funnel/Benchmarks/LinkClickBenchmark.php:63
+msgid "Redirect To"
+msgstr ""
+
+#: app/Services/Funnel/Actions/RemoveFromEmailSequenceAction.php:34
+msgid "Remove Email Sequences"
+msgstr ""
+
+#: app/Services/Integrations/CRM/RemoveFromListTrigger.php:45
+msgid "Remove From List"
+msgstr ""
+
+#: app/Services/Integrations/CRM/RemoveFromTagTrigger.php:45
+msgid "Remove From Tags"
+msgstr ""
+
+#: app/Services/Funnel/Actions/ChangeUserRoleAction.php:49
+msgid "Replace user role "
+msgstr ""
+
+#: app/Services/Funnel/Actions/HTTPSendDataAction.php:108
+msgid "Request Body Data"
+msgstr ""
+
+#: app/Services/Funnel/Actions/HTTPSendDataAction.php:137
+msgid "Request Headers Data"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterCoursePurchased.php:46
+msgid "Require completed?"
+msgstr ""
+
+#: app/Services/FunnelMultiConditionTrait.php:20
+#: app/Services/Integrations/RCP/RCPMembershipTrigger.php:83
+#: app/Services/Integrations/RCP/RCPMembershipCancelTrigger.php:83
+#: app/Services/Integrations/LifterLms/CourseEnrollTrigger.php:94
+#: app/Services/Integrations/LifterLms/MembershipEnrollTrigger.php:94
+#: app/Services/Integrations/WooCommerce/WooOrderCompletedTrigger.php:102
+#: app/Services/Integrations/WooCommerce/WooOrderStatusChangeTrigger.php:104
+#: app/Services/Integrations/WooCommerce/WooOrderRefundedTrigger.php:94
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessTrigger.php:104
+#: app/Services/Integrations/PMPro/PMProPMProMembershipTrigger.php:90
+#: app/Services/Integrations/PMPro/PMProPMProCancelLevelTrigger.php:83
+#: app/Services/Integrations/LearnDash/GroupEnrollTrigger.php:90
+#: app/Services/Integrations/LearnDash/CourseEnrollTrigger.php:92
+#: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:106
+#: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:107
+#: app/Services/Integrations/WishlistMember/WishlistMembershipTrigger.php:83
+#: app/Services/Integrations/TutorLms/CourseEnrollTrigger.php:90
+#: app/Services/Integrations/MemberPress/MembershipTrigger.php:83
+#: app/Services/Integrations/MemberPress/SubscriptionExpiredTrigger.php:83
+#: app/Services/Funnel/Triggers/UserLoginTrigger.php:84
+msgid ""
+"Restart the Automation Multiple times for a contact for this event. (Only "
+"enable if you want to restart automation for the same contact)"
+msgstr ""
+
+#: app/Services/Funnel/Actions/AddEmailSequenceAction.php:50
+msgid ""
+"Restart the sequence emails if the contact already in the email sequence"
+msgstr ""
+
+#: app/Services/Integrations/CRM/ListAppliedTrigger.php:55
+#: app/Services/Integrations/CRM/TagAppliedTrigger.php:55
+msgid "Run When"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooInit.php:68
+msgid "Sales (This Month)"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooInit.php:64
+msgid "Sales (Today)"
+msgstr ""
+
+#: app/Services/Funnel/Actions/SendCampaignEmailAction.php:35
+msgid "Schedule Campaign Email"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:236
+msgid "Segment has been created"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:266
+msgid "Segment has been updated"
+msgstr ""
+
+#: app/Services/Funnel/Actions/AddActivityAction.php:52
+msgid "Select Activity Type"
+msgstr ""
+
+#: app/Services/Funnel/Actions/RemoveFromFunnelAction.php:42
+msgid "Select Automations"
+msgstr ""
+
+#: app/Services/Funnel/Actions/RemoveFromFunnelAction.php:40
+msgid "Select Automations that you want to cancel"
+msgstr ""
+
+#: app/Services/Funnel/Actions/SendCampaignEmailAction.php:42
+msgid "Select Campaign"
+msgstr ""
+
+#: app/Services/Funnel/Actions/SendCampaignEmailAction.php:43
+msgid "Select Campaign Email"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:61
+msgid ""
+"Select conditions which will define this segment. All Conditions will be "
+"applied to filter"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/TopicCompletedTrigger.php:84
+#: app/Services/Integrations/LearnDash/LessonCompletedTrigger.php:83
+msgid "Select Course to find out Lesson"
+msgstr ""
+
+#: app/Services/Funnel/Actions/AddEmailSequenceAction.php:44
+msgid "Select Email Sequence"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/CourseCompletedTrigger.php:82
+#: app/Services/Integrations/LifterLms/CourseEnrollTrigger.php:87
+#: app/Services/Integrations/LearnDash/CourseCompletedTrigger.php:82
+#: app/Services/Integrations/LearnDash/CourseEnrollTrigger.php:85
+#: app/Services/Integrations/TutorLms/CourseCompletedTrigger.php:82
+#: app/Services/Integrations/TutorLms/CourseEnrollTrigger.php:83
+msgid "Select for which Courses this automation will run"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/GroupEnrollTrigger.php:83
+msgid "Select for which groups this automation will run"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LessonCompletedTrigger.php:86
+#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:89
+msgid "Select for which Lessons this automation will run"
+msgstr ""
+
+#: app/Services/Integrations/RCP/RCPMembershipTrigger.php:76
+#: app/Services/Integrations/RCP/RCPMembershipCancelTrigger.php:76
+#: app/Services/Integrations/PMPro/PMProPMProMembershipTrigger.php:83
+#: app/Services/Integrations/PMPro/PMProPMProCancelLevelTrigger.php:76
+#: app/Services/Integrations/WishlistMember/WishlistMembershipTrigger.php:76
+#: app/Services/Integrations/MemberPress/MembershipTrigger.php:76
+#: app/Services/Integrations/MemberPress/SubscriptionExpiredTrigger.php:76
+msgid "Select for which Membership Levels this automation will run"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterHasMembership.php:41
+#: app/Services/Integrations/LifterLms/MembershipEnrollTrigger.php:87
+msgid "Select for which Memberships this automation will run"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderCompletedTrigger.php:89
+#: app/Services/Integrations/WooCommerce/WooOrderRefundedTrigger.php:88
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessTrigger.php:91
+#: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:92
+#: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:93
+msgid "Select for which product category the automation will run"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessBenchmark.php:66
+#: app/Services/Integrations/Edd/EddOrderSuccessBenchmark.php:62
+msgid "Select for which product category the benchmark will run"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderCompletedTrigger.php:81
+#: app/Services/Integrations/WooCommerce/WooOrderRefundedTrigger.php:80
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessTrigger.php:83
+#: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:85
+#: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:86
+msgid "Select for which products this automation will run"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessBenchmark.php:58
+#: app/Services/Integrations/Edd/EddOrderSuccessBenchmark.php:55
+#: app/Services/Funnel/Benchmarks/LinkClickBenchmark.php:58
+msgid "Select for which products this benchmark will run"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/TopicCompletedTrigger.php:98
+msgid "Select for which Topics this automation will run"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/TopicCompletedTrigger.php:91
+msgid "Select Lesson to find out the available topics"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/LessonCompletedTrigger.php:91
+msgid "Select Lesson to find out Topic"
+msgstr ""
+
+#: app/Services/Integrations/CRM/ListAppliedTrigger.php:52
+#: app/Services/Integrations/CRM/RemoveFromListTrigger.php:53
+#: app/Services/Funnel/Conditions/HasListCondition.php:43
+msgid "Select List"
+msgstr ""
+
+#: app/Services/Integrations/CRM/ListAppliedTrigger.php:51
+#: app/Services/Integrations/CRM/RemoveFromListTrigger.php:52
+#: app/Services/Integrations/ElementorFormIntegration/FormWidget.php:58
+#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:49
+#: app/Services/Funnel/Conditions/HasListCondition.php:42
+msgid "Select Lists"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/AddOrderNoteAction.php:60
+msgid "Select Note Type for the reference Order."
+msgstr ""
+
+#: app/Services/Funnel/Conditions/HasUserRole.php:41
+#: app/Services/Funnel/Conditions/HasUserRole.php:42
+msgid "Select Roles"
+msgstr ""
+
+#: app/Services/Funnel/Actions/AddEmailSequenceAction.php:45
+msgid "Select Sequence Email"
+msgstr ""
+
+#: app/Services/Funnel/Actions/RemoveFromEmailSequenceAction.php:41
+msgid "Select Sequences"
+msgstr ""
+
+#: app/Services/Integrations/RCP/RCPMembershipTrigger.php:47
+#: app/Services/Integrations/RCP/RCPMembershipCancelTrigger.php:47
+#: app/Services/Integrations/LifterLms/LessonCompletedTrigger.php:51
+#: app/Services/Integrations/LifterLms/CourseCompletedTrigger.php:47
+#: app/Services/Integrations/LifterLms/CourseEnrollTrigger.php:51
+#: app/Services/Integrations/LifterLms/MembershipEnrollTrigger.php:51
+#: app/Services/Integrations/WooCommerce/WooOrderCompletedTrigger.php:48
+#: app/Services/Integrations/WooCommerce/WooOrderStatusChangeTrigger.php:48
+#: app/Services/Integrations/WooCommerce/WooOrderRefundedTrigger.php:48
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessTrigger.php:50
+#: app/Services/Integrations/PMPro/PMProPMProMembershipTrigger.php:47
+#: app/Services/Integrations/PMPro/PMProPMProCancelLevelTrigger.php:47
+#: app/Services/Integrations/LearnDash/GroupEnrollTrigger.php:47
+#: app/Services/Integrations/LearnDash/TopicCompletedTrigger.php:47
+#: app/Services/Integrations/LearnDash/CourseCompletedTrigger.php:47
+#: app/Services/Integrations/LearnDash/CourseEnrollTrigger.php:49
+#: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:47
+#: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:48
+#: app/Services/Integrations/WishlistMember/WishlistMembershipTrigger.php:47
+#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:63
+#: app/Services/Integrations/TutorLms/CourseCompletedTrigger.php:47
+#: app/Services/Integrations/TutorLms/CourseEnrollTrigger.php:47
+#: app/Services/Integrations/MemberPress/MembershipTrigger.php:47
+#: app/Services/Integrations/MemberPress/SubscriptionExpiredTrigger.php:47
+#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:47
+#: app/Services/Funnel/Triggers/UserLoginTrigger.php:41
+msgid "Select Status"
+msgstr ""
+
+#: app/Services/Integrations/CRM/TagAppliedTrigger.php:52
+#: app/Services/Integrations/CRM/RemoveFromTagTrigger.php:53
+#: app/Services/Funnel/Conditions/HasTagCondition.php:43
+msgid "Select Tag"
+msgstr ""
+
+#: app/Services/Integrations/CRM/TagAppliedTrigger.php:51
+#: app/Services/Integrations/CRM/RemoveFromTagTrigger.php:52
+#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:56
+#: app/Services/Funnel/Conditions/HasTagCondition.php:42
+msgid "Select Tags"
+msgstr ""
+
+#: app/Services/Integrations/ElementorFormIntegration/FormWidget.php:75
+msgid "Select tags"
+msgstr ""
+
+#: app/Services/Funnel/Conditions/HasListCondition.php:35
+msgid "Select the lists that you want to check for a contact"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderCompletedTrigger.php:95
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessBenchmark.php:72
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessTrigger.php:97
+#: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:99
+#: app/Services/Integrations/Edd/EddOrderSuccessBenchmark.php:69
+#: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:100
+msgid "Select the purchase type"
+msgstr ""
+
+#: app/Services/Funnel/Conditions/HasTagCondition.php:35
+msgid "Select the tags that you want to check for a contact"
+msgstr ""
+
+#: app/Services/Funnel/Actions/RemoveFromFunnelAction.php:37
+msgid "Select which automations will be cancelled from the contact"
+msgstr ""
+
+#: app/Services/Funnel/Actions/SendCampaignEmailAction.php:36
+msgid "Select which campaign email will be scheduled to this contact"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterCoursePurchased.php:41
+#: app/Services/Integrations/LearnDash/LearnDashCoursePurchased.php:40
+#: app/Services/Integrations/TutorLms/TutorCoursePurchased.php:40
+msgid "Select Which Course you want to match for checking enrollment"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/LearnDashIsInGroup.php:40
+msgid "Select Which Group you want to match for checking"
+msgstr ""
+
+#: app/Services/Integrations/RCP/RCPIsInMembership.php:40
+#: app/Services/Integrations/PMPro/PMProIsInMembership.php:40
+#: app/Services/Integrations/WishlistMember/WishlishIsInLevel.php:40
+msgid "Select Which Level you want to match for this conditional split"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooPurchased.php:40
+#: app/Services/Integrations/Edd/EddPurchased.php:40
+msgid "Select Which Product you want to match for checking Purchase"
+msgstr ""
+
+#: app/Services/Funnel/Actions/AddEmailSequenceAction.php:38
+msgid "Select which sequence will be assigned to this contact"
+msgstr ""
+
+#: app/Services/Funnel/Actions/RemoveFromEmailSequenceAction.php:35
+msgid "Select which sequences will be removed from this contact"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:284
+msgid "Selected segment has been deleted"
+msgstr ""
+
+#: app/Http/Controllers/SequenceController.php:137
+msgid "Selected sequence has been successfully duplicated"
+msgstr ""
+
+#: app/Http/Controllers/SmartLinksController.php:99
+msgid "Selected Smart Link has been deleted"
+msgstr ""
+
+#: app/Http/Controllers/SequenceController.php:253
+msgid "Selected subscribers has been successfully removed from this sequence"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterInit.php:168
+#: app/Services/Integrations/TutorLms/TutorLmsInit.php:138
+msgid "Selected tags will be applied to the contact on course completion."
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterInit.php:155
+#: app/Services/Integrations/TutorLms/TutorLmsInit.php:124
+msgid "Selected tags will be applied to the contact on course enrollment."
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterInit.php:211
+msgid "Selected tags will be applied to the contact on lesson completed."
+msgstr ""
+
+#: app/Services/Funnel/Actions/SendCampaignEmailAction.php:24
+msgid "Send an Email from your existing campaign"
+msgstr ""
+
+#: app/Services/Funnel/Actions/AddEmailSequenceAction.php:25
+msgid "Send Automated Emails based on your Sequence settings"
+msgstr ""
+
+#: app/Services/Funnel/Actions/SendCampaignEmailAction.php:23
+msgid "Send Campaign Email"
+msgstr ""
+
+#: app/Services/Funnel/Actions/HTTPSendDataAction.php:154
+msgid ""
+"Send Data as Background Process. (You may enable this if you have lots of "
+"tasks)"
+msgstr ""
+
+#: app/Services/Funnel/Actions/HTTPSendDataAction.php:55
+msgid "Send Data to External Server"
+msgstr ""
+
+#: app/Services/Funnel/Actions/HTTPSendDataAction.php:27
+#: app/Services/Funnel/Actions/HTTPSendDataAction.php:56
+msgid "Send Data to external server via GET or POST Method"
+msgstr ""
+
+#: app/Services/Integrations/ElementorFormIntegration/FormWidget.php:98
+msgid ""
+"Send Double Optin Email for new or pending contacts. If you don't enable "
+"this then contact will be added as subscribed state."
+msgstr ""
+
+#: app/Services/Funnel/Actions/UserRegistrationAction.php:82
+msgid "Send WordPress user notification email"
+msgstr ""
+
+#: app/Http/Controllers/SequenceMailController.php:64
+msgid "Sequence email has been created"
+msgstr ""
+
+#: app/Http/Controllers/SequenceMailController.php:97
+msgid "Sequence email has been updated"
+msgstr ""
+
+#: app/Http/Controllers/SequenceController.php:45
+msgid "Sequence has been created"
+msgstr ""
+
+#: app/Http/Controllers/SequenceController.php:81
+msgid "Sequence has been updated"
+msgstr ""
+
+#: app/Services/Funnel/Actions/AddEmailSequenceAction.php:24
+#: app/Services/Funnel/Actions/AddEmailSequenceAction.php:37
+msgid "Set Sequence Emails"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooConditions.php:91
+msgid "Set the condition groups as many as you like"
+msgstr ""
+
+#: app/Services/Funnel/Actions/UpdateContactPropertyAction.php:46
+msgid "Setup contact properties that you want to update"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:174
+msgid "Should Match Both Open & Click Condition?"
+msgstr ""
+
+#: app/Http/Controllers/SmartLinksController.php:68
+msgid "SmartLink has be created"
+msgstr ""
+
+#: app/Http/Controllers/SmartLinksController.php:90
+msgid "SmartLink has be updated"
+msgstr ""
+
+#: app/Http/Controllers/SmartLinksController.php:49
+msgid "SmartLinks module has been successfully activated"
+msgstr ""
+
+#: app/Http/Controllers/CampaignsProController.php:20
+msgid "Sorry no failed campaign emails found"
+msgstr ""
+
+#: app/Http/Controllers/CampaignsProController.php:47
+#: app/Http/Controllers/CampaignsProController.php:57
+msgid "Sorry! No emails found"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:275
+msgid "Sorry! No segment found"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:111
+#: app/Hooks/Handlers/DataExporter.php:202
+msgid "Source"
+msgstr ""
+
+#: app/Services/Funnel/Conditions/CheckUserPropCondition.php:52
+msgid "Specify Matching Conditions"
+msgstr ""
+
+#: app/Services/Funnel/Conditions/CheckUserPropCondition.php:53
+msgid ""
+"Specify which contact properties need to matched. Based on the conditions it "
+"will run yes blocks or no blocks"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:89
+#: app/Hooks/Handlers/DataExporter.php:196
+#: app/Services/Funnel/Conditions/CheckUserPropCondition.php:108
+msgid "State"
+msgstr ""
+
+#: app/Hooks/Handlers/DataExporter.php:200
+msgid "Status"
+msgstr ""
+
+#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:24
+msgid "Student Complete a Lesson"
+msgstr ""
+
+#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:41
+msgid "Student Complete a Lesson in LifterLMS"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/CourseCompletedTrigger.php:24
+#: app/Services/Integrations/TutorLms/CourseCompletedTrigger.php:24
+msgid "Student completes a Course"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/CourseCompletedTrigger.php:39
+msgid "Student completes a Course in LifterLMS"
+msgstr ""
+
+#: app/Services/Integrations/TutorLms/CourseCompletedTrigger.php:39
+msgid "Student completes a Course in TutorLMS"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LessonCompletedTrigger.php:28
+msgid "Student completes a Lesson"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LessonCompletedTrigger.php:43
+msgid "Student completes a Lesson in LifterLMS"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:104
+#: app/Services/Integrations/RCP/RCPMembershipTrigger.php:46
+#: app/Services/Integrations/RCP/RCPMembershipCancelTrigger.php:46
+#: app/Services/Integrations/LifterLms/LessonCompletedTrigger.php:50
+#: app/Services/Integrations/LifterLms/CourseCompletedTrigger.php:46
+#: app/Services/Integrations/LifterLms/CourseEnrollTrigger.php:50
+#: app/Services/Integrations/LifterLms/MembershipEnrollTrigger.php:50
+#: app/Services/Integrations/WooCommerce/WooOrderCompletedTrigger.php:47
+#: app/Services/Integrations/WooCommerce/WooOrderStatusChangeTrigger.php:47
+#: app/Services/Integrations/WooCommerce/WooOrderRefundedTrigger.php:47
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessTrigger.php:49
+#: app/Services/Integrations/PMPro/PMProPMProMembershipTrigger.php:46
+#: app/Services/Integrations/PMPro/PMProPMProCancelLevelTrigger.php:46
+#: app/Services/Integrations/LearnDash/GroupEnrollTrigger.php:46
+#: app/Services/Integrations/LearnDash/TopicCompletedTrigger.php:46
+#: app/Services/Integrations/LearnDash/LessonCompletedTrigger.php:46
+#: app/Services/Integrations/LearnDash/CourseCompletedTrigger.php:46
+#: app/Services/Integrations/LearnDash/CourseEnrollTrigger.php:48
+#: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:46
+#: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:47
+#: app/Services/Integrations/WishlistMember/WishlistMembershipTrigger.php:46
+#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:62
+#: app/Services/Integrations/TutorLms/CourseCompletedTrigger.php:46
+#: app/Services/Integrations/TutorLms/CourseEnrollTrigger.php:46
+#: app/Services/Integrations/MemberPress/MembershipTrigger.php:46
+#: app/Services/Integrations/MemberPress/SubscriptionExpiredTrigger.php:46
+#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:46
+#: app/Services/Funnel/Triggers/UserLoginTrigger.php:40
+msgid "Subscription Status"
+msgstr ""
+
+#: app/Services/Integrations/CRM/TagAppliedTrigger.php:28
+#: app/Services/Integrations/CRM/TagAppliedTrigger.php:44
+msgid "Tag Applied"
+msgstr ""
+
+#: app/Services/Integrations/CRM/RemoveFromTagTrigger.php:29
+msgid "Tag Removed"
+msgstr ""
+
+#: app/Http/Controllers/DynamicSegmentController.php:129
+#: app/Hooks/Handlers/DataExporter.php:208
+msgid "Tags"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/TopicCompletedTrigger.php:83
+#: app/Services/Integrations/LearnDash/LessonCompletedTrigger.php:82
+msgid "Target Course"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/CourseCompletedTrigger.php:81
+#: app/Services/Integrations/LifterLms/LifterCoursePurchased.php:40
+#: app/Services/Integrations/LifterLms/CourseEnrollTrigger.php:86
+#: app/Services/Integrations/LearnDash/CourseCompletedTrigger.php:81
+#: app/Services/Integrations/LearnDash/CourseEnrollTrigger.php:84
+#: app/Services/Integrations/LearnDash/LearnDashCoursePurchased.php:39
+#: app/Services/Integrations/TutorLms/TutorCoursePurchased.php:39
+#: app/Services/Integrations/TutorLms/CourseCompletedTrigger.php:81
+#: app/Services/Integrations/TutorLms/CourseEnrollTrigger.php:82
+msgid "Target Courses"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/GroupEnrollTrigger.php:82
+#: app/Services/Integrations/LearnDash/LearnDashIsInGroup.php:39
+msgid "Target Groups"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/TopicCompletedTrigger.php:90
+#: app/Services/Integrations/LearnDash/LessonCompletedTrigger.php:90
+msgid "Target Lesson"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LessonCompletedTrigger.php:85
+#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:88
+msgid "Target Lessons"
+msgstr ""
+
+#: app/Services/Integrations/RCP/RCPIsInMembership.php:39
+#: app/Services/Integrations/PMPro/PMProIsInMembership.php:39
+#: app/Services/Integrations/WishlistMember/WishlishIsInLevel.php:39
+msgid "Target Levels"
+msgstr ""
+
+#: app/Services/Integrations/RCP/RCPMembershipTrigger.php:75
+#: app/Services/Integrations/RCP/RCPMembershipCancelTrigger.php:75
+#: app/Services/Integrations/PMPro/PMProPMProMembershipTrigger.php:82
+#: app/Services/Integrations/PMPro/PMProPMProCancelLevelTrigger.php:75
+#: app/Services/Integrations/WishlistMember/WishlistMembershipTrigger.php:75
+#: app/Services/Integrations/MemberPress/MembershipTrigger.php:75
+#: app/Services/Integrations/MemberPress/SubscriptionExpiredTrigger.php:75
+msgid "Target Membership Levels"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterHasMembership.php:40
+#: app/Services/Integrations/LifterLms/MembershipEnrollTrigger.php:86
+msgid "Target Memberships"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderCompletedTrigger.php:88
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessBenchmark.php:65
+#: app/Services/Integrations/WooCommerce/WooOrderRefundedTrigger.php:87
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessTrigger.php:90
+#: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:91
+#: app/Services/Integrations/Edd/EddOrderSuccessBenchmark.php:61
+#: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:92
+msgid "Target Product Categories"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooPurchased.php:39
+#: app/Services/Integrations/WooCommerce/WooOrderCompletedTrigger.php:80
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessBenchmark.php:57
+#: app/Services/Integrations/WooCommerce/WooOrderRefundedTrigger.php:79
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessTrigger.php:82
+#: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:84
+#: app/Services/Integrations/Edd/EddOrderSuccessBenchmark.php:54
+#: app/Services/Integrations/Edd/EddPurchased.php:39
+#: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:85
+msgid "Target Products"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/TopicCompletedTrigger.php:97
+msgid "Target Topics"
+msgstr ""
+
+#: app/Services/PluginManager/LicenseManager.php:78
+#, php-format
+msgid "The %s license needs to be activated. %sActivate Now%s"
+msgstr ""
+
+#: app/Hooks/Handlers/DataExporter.php:161
+msgid ""
+"The Block Action defined in the JSON file is not available on your site."
+msgstr ""
+
+#: app/Hooks/Handlers/DataExporter.php:134
+msgid "The provided JSON file is not valid"
+msgstr ""
+
+#: app/Hooks/Handlers/DataExporter.php:145
+msgid "The trigger defined in the JSON file is not available on your site."
+msgstr ""
+
+#: app/Services/Funnel/Actions/EndFunnel.php:36
+msgid "This automation will be marked as completed in this point for a contact"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderRefundedTrigger.php:26
+#: app/Services/Integrations/WooCommerce/WooOrderRefundedTrigger.php:41
+msgid "This Automation will start once an order get refunded"
+msgstr ""
+
+#: app/Services/Funnel/Triggers/UserLoginTrigger.php:26
+#: app/Services/Funnel/Triggers/UserLoginTrigger.php:34
+msgid "This Funnel will be initiated when a user login to your site"
+msgstr ""
+
+#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:25
+#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:40
+msgid ""
+"This Funnel will be initiated when affiliate will be approved or register as "
+"direct approved"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/CourseCompletedTrigger.php:25
+#: app/Services/Integrations/TutorLms/CourseCompletedTrigger.php:25
+msgid "This Funnel will start a student completes a Course"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/LessonCompletedTrigger.php:25
+#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:25
+msgid "This Funnel will start a student completes a lesson"
+msgstr ""
+
+#: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:41
+msgid "This Funnel will start once an order get marked as refunded"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderCompletedTrigger.php:26
+msgid "This Funnel will start once new order has been marked as completed"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessTrigger.php:28
+msgid "This Funnel will start once new order has been placed as processing"
+msgstr ""
+
+#: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:25
+#: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:40
+msgid ""
+"This Funnel will start once new order will be added as successful payment"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderCompletedTrigger.php:41
+msgid "This Funnel will start once new order will be marked as completed"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessTrigger.php:43
+msgid ""
+"This Funnel will start once new order will be marked as successful payment"
+msgstr ""
+
+#: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:26
+msgid "This Funnel will start once payment refunded for an order"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/CourseEnrollTrigger.php:29
+msgid "This funnel will start when a contact has been enrolled in a course"
+msgstr ""
+
+#: app/Services/Integrations/WishlistMember/WishlistMembershipTrigger.php:25
+#: app/Services/Integrations/WishlistMember/WishlistMembershipTrigger.php:40
+msgid "This funnel will start when a member is added to a level"
+msgstr ""
+
+#: app/Services/Integrations/RCP/RCPMembershipTrigger.php:25
+#: app/Services/Integrations/RCP/RCPMembershipTrigger.php:40
+msgid ""
+"This funnel will start when a member is added to a level for the first time"
+msgstr ""
+
+#: app/Services/Integrations/RCP/RCPMembershipCancelTrigger.php:25
+#: app/Services/Integrations/RCP/RCPMembershipCancelTrigger.php:40
+msgid "This funnel will start when a membership has been cancelled"
+msgstr ""
+
+#: app/Services/Integrations/PMPro/PMProPMProCancelLevelTrigger.php:25
+#: app/Services/Integrations/PMPro/PMProPMProCancelLevelTrigger.php:40
+msgid "This funnel will start when a membership has been expired for a user"
+msgstr ""
+
+#: app/Services/Integrations/MemberPress/MembershipTrigger.php:25
+#: app/Services/Integrations/MemberPress/MembershipTrigger.php:40
+msgid ""
+"This funnel will start when a membership level get activated for a member"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderStatusChangeTrigger.php:26
+#: app/Services/Integrations/WooCommerce/WooOrderStatusChangeTrigger.php:41
+msgid ""
+"This Funnel will start when a Order status will change from one state to "
+"another"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/CourseCompletedTrigger.php:40
+#: app/Services/Integrations/LearnDash/CourseCompletedTrigger.php:40
+#: app/Services/Integrations/TutorLms/CourseCompletedTrigger.php:40
+msgid "This Funnel will start when a student completes a Course"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LessonCompletedTrigger.php:29
+#: app/Services/Integrations/LifterLms/LessonCompletedTrigger.php:44
+#: app/Services/Integrations/LearnDash/LessonCompletedTrigger.php:40
+#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:42
+msgid "This Funnel will start when a student completes a lesson"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/MembershipEnrollTrigger.php:29
+msgid ""
+"This Funnel will start when a student has been enrolled in a membership level"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/MembershipEnrollTrigger.php:44
+msgid "This funnel will start when a student is added in a Membership"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/CourseEnrollTrigger.php:44
+#: app/Services/Integrations/LearnDash/CourseEnrollTrigger.php:42
+#: app/Services/Integrations/TutorLms/CourseEnrollTrigger.php:40
+msgid "This Funnel will start when a student is enrolled in a course"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/CourseEnrollTrigger.php:25
+msgid "This funnel will start when a student is enrolled in a course"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/GroupEnrollTrigger.php:40
+msgid "This Funnel will start when a student is enrolled in a group"
+msgstr ""
+
+#: app/Services/Integrations/MemberPress/SubscriptionExpiredTrigger.php:25
+#: app/Services/Integrations/MemberPress/SubscriptionExpiredTrigger.php:40
+msgid "This funnel will start when a subscription has been expired"
+msgstr ""
+
+#: app/Services/Integrations/PMPro/PMProPMProMembershipTrigger.php:25
+msgid ""
+"This funnel will start when a user is assigned to specified membership levels"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/TopicCompletedTrigger.php:25
+#: app/Services/Integrations/LearnDash/TopicCompletedTrigger.php:40
+msgid "This funnel will start when a user is completes a lesson topic"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/GroupEnrollTrigger.php:25
+msgid "This funnel will start when a user is enrolled in a group"
+msgstr ""
+
+#: app/Services/Integrations/PMPro/PMProPMProMembershipTrigger.php:40
+msgid "This funnel will start when an user is enrolled in Membership Levels"
+msgstr ""
+
+#: app/Services/DynamicSegments/CustomSegment.php:49
+msgid ""
+"This is a custom segment and contacts are filter based your provided filters "
+"on real time data."
+msgstr ""
+
+#: app/Services/DynamicSegments/AffiliateWPSegment.php:22
+msgid ""
+"This segment contains all your Subscribed contacts which are also your "
+"active Affiliates"
+msgstr ""
+
+#: app/Services/DynamicSegments/EddActiveCustomerSegment.php:22
+msgid ""
+"This segment contains all your Subscribed contacts which are also your EDD "
+"Customers with atleast one purchase"
+msgstr ""
+
+#: app/Services/DynamicSegments/PMProMembersSegment.php:23
+msgid ""
+"This segment contains all your Subscribed contacts which are also your Paid "
+"Membership Members"
+msgstr ""
+
+#: app/Services/DynamicSegments/WooCustomerSegment.php:22
+msgid ""
+"This segment contains all your Subscribed contacts which are also your "
+"WooCommerce Customers"
+msgstr ""
+
+#: app/Services/DynamicSegments/WpUserSegment.php:22
+msgid ""
+"This segment contains all your Subscribed contacts which are also your "
+"WordPress users"
+msgstr ""
+
+#: app/Services/Funnel/Benchmarks/LinkClickBenchmark.php:36
+#: app/Services/Funnel/Benchmarks/LinkClickBenchmark.php:51
+msgid "This will run once a subscriber click on this provided link"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessBenchmark.php:26
+msgid "This will run once new order has been placed as processing"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderSuccessBenchmark.php:51
+msgid "This will run once new order will be placed as processing"
+msgstr ""
+
+#: app/Services/Integrations/Edd/EddOrderSuccessBenchmark.php:25
+#: app/Services/Integrations/Edd/EddOrderSuccessBenchmark.php:50
+msgid "This will run once new order will be placed as processing in EDD"
+msgstr ""
+
+#: app/Services/Integrations/CRM/RemoveFromListTrigger.php:46
+msgid ""
+"This will run when any of the selected lists have been removed from a contact"
+msgstr ""
+
+#: app/Services/Integrations/CRM/RemoveFromTagTrigger.php:46
+msgid ""
+"This will run when any of the selected tags have been removed from a contact"
+msgstr ""
+
+#: app/Services/Integrations/CRM/ListAppliedTrigger.php:29
+#: app/Services/Integrations/CRM/ListAppliedTrigger.php:45
+msgid "This will run when selected lists have been applied to a contact"
+msgstr ""
+
+#: app/Services/Integrations/CRM/RemoveFromListTrigger.php:30
+msgid "This will run when selected lists have been removed from a contact"
+msgstr ""
+
+#: app/Services/Integrations/CRM/TagAppliedTrigger.php:29
+#: app/Services/Integrations/CRM/TagAppliedTrigger.php:45
+msgid "This will run when selected tags have been applied to a contact"
+msgstr ""
+
+#: app/Services/Integrations/CRM/RemoveFromTagTrigger.php:30
+msgid "This will run when selected Tags have been removed from a contact"
+msgstr ""
+
+#: app/Hooks/Handlers/DataExporter.php:191
+msgid "Timezone"
+msgstr ""
+
+#: app/Hooks/Handlers/DataExporter.php:187
+msgid "Title"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooConditions.php:95
+#: app/Services/Funnel/Conditions/CheckUserPropCondition.php:55
+msgid "True if all conditions match"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooConditions.php:96
+#: app/Services/Funnel/Conditions/CheckUserPropCondition.php:56
+msgid "True if any of the conditions match"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/AddOrderNoteAction.php:55
+msgid ""
+"Type the note that you want to add to the reference order. You can also use "
+"smart tags"
+msgstr ""
+
+#: app/Services/Funnel/Actions/UpdateContactPropertyAction.php:23
+#: app/Services/Funnel/Actions/UpdateContactPropertyAction.php:40
+msgid "Update Contact Property"
+msgstr ""
+
+#: app/Services/Funnel/Actions/UpdateContactPropertyAction.php:24
+#: app/Services/Funnel/Actions/UpdateContactPropertyAction.php:41
+msgid "Update custom fields or few main property of a contact"
+msgstr ""
+
+#: app/Services/Funnel/Actions/UpdateUserMetaAction.php:24
+#: app/Services/Funnel/Actions/UpdateUserMetaAction.php:42
+msgid "Update WordPress User Meta Data"
+msgstr ""
+
+#: app/Services/Funnel/Actions/UpdateUserMetaAction.php:23
+#: app/Services/Funnel/Actions/UpdateUserMetaAction.php:41
+msgid "Update WP User Meta"
+msgstr ""
+
+#: app/Hooks/Handlers/DataExporter.php:186
+msgid "User ID"
+msgstr ""
+
+#: app/Services/Funnel/Triggers/UserLoginTrigger.php:25
+#: app/Services/Funnel/Triggers/UserLoginTrigger.php:33
+msgid "User Login"
+msgstr ""
+
+#: app/Services/Funnel/Actions/UpdateUserMetaAction.php:45
+#: app/Services/Funnel/Actions/UserRegistrationAction.php:70
+msgid "User Meta Mapping"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooConditions.php:42
+msgid "Woocommerce Conditions"
+msgstr ""
+
+#: app/Services/DynamicSegments/WooCustomerSegment.php:20
+msgid "WooCommerce Customers"
+msgstr ""
+
+#: app/Services/DynamicSegments/WooCustomerSegment.php:21
+msgid "WooCommerce customers who are also in the contact list as subscribed"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderCompletedTrigger.php:40
+msgid "WooCommerce Order has been completed"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderRefundedTrigger.php:40
+msgid "WooCommerce Order has been refunded"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/WooOrderStatusChangeTrigger.php:40
+msgid "WooCommerce Order Status Changed"
+msgstr ""
+
+#: app/Services/DynamicSegments/WpUserSegment.php:20
+msgid "WordPress Users"
+msgstr ""
+
+#: app/Services/DynamicSegments/WpUserSegment.php:21
+msgid "WordPress users who are also in the contact list as subscribed"
+msgstr ""
+
+#: app/Http/Controllers/CampaignsProController.php:89
+msgid "You can do this action if campaign is in archived status only"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/TopicCompletedTrigger.php:86
+#: app/Services/Integrations/LearnDash/LessonCompletedTrigger.php:85
+msgid "You must select a course"
+msgstr ""
+
+#: app/Services/Integrations/LearnDash/TopicCompletedTrigger.php:93
+msgid "You must select a topic"
+msgstr ""
+
+#: app/Http/Controllers/LicenseController.php:58
+msgid "Your license key has been successfully deactivated"
+msgstr ""
+
+#: app/Http/Controllers/LicenseController.php:41
+msgid "Your license key has been successfully updated"
+msgstr ""
+
+#: app/Services/Funnel/Benchmarks/LinkClickBenchmark.php:64
+msgid "Your Target URL"
+msgstr ""
