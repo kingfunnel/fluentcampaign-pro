@@ -2,16 +2,10 @@
 
 namespace FluentCampaign\App\Hooks\Handlers;
 
-
-use FluentCrm\App\Models\Funnel;
-use FluentCrm\App\Models\FunnelSequence;
 use FluentCrm\App\Models\Subscriber;
-use FluentCrm\App\Services\Funnel\FunnelHelper;
-use FluentCrm\App\Services\Helper;
+use FluentCrm\App\Models\SubscriberNote;
 use FluentCrm\App\Services\PermissionManager;
 use FluentCrm\Includes\Helpers\Arr;
-use FluentCrm\Includes\Request\Request;
-use League\Csv\Writer;
 
 class DataExporter
 {
@@ -83,7 +77,7 @@ class DataExporter
             }
         }
 
-        $writer = Writer::createFromFileObject(new \SplTempFileObject());
+        $writer = $this->getCsvWriter();
         $writer->insertOne(array_values($insertHeaders));
 
         $rows = [];
@@ -116,6 +110,47 @@ class DataExporter
 
         $writer->insertAll($rows);
         $writer->output('contact-'.date('Y-m-d_H-i-s').'.csv');
+        die();
+    }
+
+    public function exportNotes()
+    {
+        $this->verifyRequest();
+        $this->request = FluentCrm('request');
+
+        $contactId = $this->request->get('subscriber_id');
+
+        $notes = SubscriberNote::where('subscriber_id', $contactId)
+            ->orderBy('id', 'DESC')
+            ->with('added_by')
+            ->get();
+
+        $writer = $this->getCsvWriter();
+        $writer->insertOne([
+            'Id',
+            'Title',
+            'Description',
+            'Status',
+            'Type',
+            'Added By',
+            'Created At'
+        ]);
+
+        $rows = [];
+        foreach ($notes as $note) {
+            $rows[] = [
+                $note->id,
+                $note->title,
+                $note->description,
+                $note->status,
+                $note->type,
+                ($note->added_by) ? $note->added_by->display_name : '',
+                $note->created_at
+            ];
+        }
+
+        $writer->insertAll($rows);
+        $writer->output($contactId.'-contact-notes-'.date('Y-m-d_H-i').'.csv');
         die();
     }
 
@@ -203,7 +238,7 @@ class DataExporter
             'date_of_birth' => __('Date Of Birth', 'fluentcampaign-pro'),
             'last_activity' => __('Last Activity', 'fluentcampaign-pro'),
             'created_at' => __('Created At', 'fluentcampaign-pro'),
-            'updated_at' => __('Created At', 'fluentcampaign-pro'),
+            'updated_at' => __('Updated At', 'fluentcampaign-pro'),
             'lists' => __('Lists', 'fluentcampaign-pro'),
             'tags' => __('Tags', 'fluentcampaign-pro')
         ];
@@ -217,5 +252,15 @@ class DataExporter
         }
 
         die('You do not have permission');
+    }
+
+
+    private function getCsvWriter()
+    {
+        if(!class_exists('\League\Csv\Writer')) {
+            include FLUENTCRM_PLUGIN_PATH.'includes/Libs/csv/autoload.php';
+        }
+
+        return \League\Csv\Writer::createFromFileObject(new \SplTempFileObject());
     }
 }

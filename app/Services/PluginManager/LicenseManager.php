@@ -12,7 +12,7 @@ class LicenseManager
 
         $this->settings = [
             'item_id'        => 341197,
-            'license_server' => 'https://wpmanageninja.com',
+            'license_server' => 'https://api.wpmanageninja.com/plugin',
             'plugin_file'    => FLUENTCAMPAIGN_DIR_FILE,
             'store_url'      => 'https://wpmanageninja.com',
             'version'        => FLUENTCAMPAIGN_PLUGIN_VERSION,
@@ -101,15 +101,15 @@ class LicenseManager
 
         // Call the custom API.
         $response = wp_remote_get(
-            $this->getVar('store_url'),
+            $this->getVar('license_server'),
             array('timeout' => 15, 'sslverify' => false, 'body' => $api_params)
         );
 
         // make sure the response came back okay
         if (is_wp_error($response)) {
-            $license_data = file_get_contents($this->getVar('store_url') . '?' . http_build_query($api_params));
+            $license_data = file_get_contents($this->getVar('license_server') . '?' . http_build_query($api_params));
             if (!$license_data) {
-                $license_data = $this->urlGetContentFallBack($this->getVar('store_url') . '?' . http_build_query($api_params));
+                $license_data = $this->urlGetContentFallBack($this->getVar('license_server') . '?' . http_build_query($api_params));
             }
             if (!$license_data) {
                 return new \WP_Error(
@@ -149,7 +149,7 @@ class LicenseManager
         );
 
         // Call the custom API.
-        $response = wp_remote_post($this->getVar('store_url'),
+        $response = wp_remote_post($this->getVar('license_server'),
             array('timeout' => 15, 'sslverify' => false, 'body' => $api_params));
 
         // make sure the response came back okay
@@ -217,7 +217,7 @@ class LicenseManager
 
         // Call the custom API.
         $response = wp_remote_get(
-            $this->getVar('store_url'),
+            $this->getVar('license_server'),
             array(
                 'timeout'   => 15,
                 'sslverify' => false,
@@ -367,7 +367,7 @@ class LicenseManager
         $licenseDetails = $this->getLicenseDetails();
 
         // setup the updater
-        new Updater($this->getVar('store_url'), $this->getVar('plugin_file'), array(
+        new Updater($this->getVar('license_server'), $this->getVar('plugin_file'), array(
             'version'   => $this->getVar('version'),
             'license'   => $licenseDetails['license_key'],
             'item_name' => $this->getVar('item_name'),

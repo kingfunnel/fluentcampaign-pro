@@ -121,16 +121,17 @@ class Helper
         }
 
         // check the products ids
-        if ($conditions['product_ids']) {
+        if (!empty($conditions['product_ids'])) {
             if (!array_intersect($purchaseProductIds, $conditions['product_ids'])) {
                 return false;
+            } else {
+                return true;
             }
         }
 
-        if ($targetCategories = $conditions['product_categories']) {
-
+        if (!empty($conditions['product_categories'])) {
             $categoryMatch = wpFluent()->table('term_relationships')
-                ->whereIn('term_taxonomy_id', $targetCategories)
+                ->whereIn('term_taxonomy_id', $conditions['product_categories'])
                 ->whereIn('object_id', $purchaseProductIds)
                 ->count();
 
@@ -138,35 +139,26 @@ class Helper
                 return false;
             }
         }
+
         return true;
     }
 
+    /**
+     * @param $order \WC_Order
+     * @param $purchaseType
+     */
     public static function isPurchaseTypeMatch($order, $purchaseType)
     {
         if (!$purchaseType) {
             return true;
         }
-        if ($purchaseType == 'from_second') {
-            $orders = wc_get_orders([
-                'limit'       => 2,
-                'return'      => 'ids',
-                'status'      => ['wc-processing', 'wc-completed'],
-                'customer_id' => $order->customer_id
-            ]);
 
-            if (count($orders) < 2) {
-                return false;
-            }
+        if ($purchaseType == 'from_second') {
+            $orderCounts = self::getPaidOrderCountByReferenceOrder($order);
+            return $orderCounts >= 2;
         } else if ($purchaseType == 'first_purchase') {
-            $orders = wc_get_orders([
-                'limit'       => 2,
-                'return'      => 'ids',
-                'status'      => ['wc-processing', 'wc-completed'],
-                'customer_id' => $order->customer_id
-            ]);
-            if (count($orders) > 1) {
-                return false;
-            }
+            $orderCounts = self::getPaidOrderCountByReferenceOrder($order);
+            return $orderCounts <= 1;
         }
 
         return true;
@@ -242,4 +234,38 @@ class Helper
     }
 
 
+    /**
+     * @param $order \WC_Order
+     */
+    public static function getPaidOrderCountByReferenceOrder($order)
+    {
+        $customerId = $order->get_customer_id();
+
+        if (!$customerId) {
+            $customerLookup = wpFluent()->table('wc_customer_lookup')
+                ->where('email', $order->get_billing_email('edit'))
+                ->first();
+            if ($customerLookup) {
+                $customerId = $customerLookup->customer_id;
+            } else {
+                return 1;
+            }
+        }
+
+        $orderStats = wpFluent()->table('wc_order_stats')
+            ->where('customer_id', $customerId)
+            ->whereNot('order_id', $order->get_id())
+            ->select(['order_id'])
+            ->whereIn('status', ['wc-processing', 'wc-completed'])
+            ->get();
+
+        $orderIds = [];
+
+        foreach ($orderStats as $orderStat) {
+            $orderIds[] = $orderStat->order_id;
+        }
+
+        return count(array_unique($orderIds)) + 1;
+
+    }
 }

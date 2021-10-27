@@ -4,6 +4,7 @@ namespace FluentCampaign\App\Services\Integrations\LearnDash;
 
 use FluentCrm\App\Models\Tag;
 use FluentCrm\App\Services\Html\TableBuilder;
+use FluentCrm\Includes\Helpers\Arr;
 
 class LdInit
 {
@@ -16,20 +17,29 @@ class LdInit
         new \FluentCampaign\App\Services\Integrations\LearnDash\GroupEnrollTrigger();
         new \FluentCampaign\App\Services\Integrations\LearnDash\LearnDashCoursePurchased();
         new \FluentCampaign\App\Services\Integrations\LearnDash\LearnDashIsInGroup();
+        new \FluentCampaign\App\Services\Integrations\LearnDash\LearnDashImporter();
+
 
         // push profile section
         add_filter('fluentcrm_profile_sections', array($this, 'pushCoursesOnProfile'));
 
         add_filter('fluencrm_profile_section_ld_profile_courses', array($this, 'pushCoursesContent'), 10, 2);
 
-        $usingWpFusion = apply_filters('fluentcrm_using_wpfusion', defined('WP_FUSION_VERSION'));
-        if (!$usingWpFusion) {
-            add_filter('learndash_settings_fields', array($this, 'addCourseFields'), 10, 2);
+        if (!apply_filters('fluentcrm_disable_integration_metaboxes', false, 'learndash')) {
+            add_filter('learndash_settings_fields', array($this, 'addCourseGroupsFields'), 10, 2);
 
             add_action('save_post_sfwd-courses', array($this, 'saveCourseMetaBox'));
 
             add_action('learndash_update_course_access', array($this, 'maybeCourseEnrolledTags'), 20, 4);
             add_action('learndash_course_completed', array($this, 'maybeCourseCompletedTags'), 20);
+
+            /*
+             * Groups specific actions
+             */
+            add_action('save_post_groups', array($this, 'saveGroupMetaBox'));
+            add_action( 'ld_added_group_access', array( $this, 'maybeGroupEnrolledTags' ), 10, 2 );
+            add_action( 'ld_removed_group_access', array( $this, 'maybeGroupLeaveTagRemove' ), 10, 2 );
+
         }
     }
 
@@ -100,52 +110,92 @@ class LdInit
         return $content;
     }
 
-    public function addCourseFields($fields, $metabox_key)
+    public function addCourseGroupsFields($fields, $metabox_key)
     {
-        if ('learndash-course-access-settings' != $metabox_key) {
-            return $fields;
+        if ($metabox_key == 'learndash-course-access-settings') {
+            global $post;
+
+            if (empty($post) || empty($post->ID)) {
+                return $fields;
+            }
+
+            $tagSettings = wp_parse_args(get_post_meta($post->ID, '_fluentcrm_settings', true), [
+                'enrolled_tags'  => [],
+                'completed_tags' => []
+            ]);
+
+            $formattedTags = [];
+            foreach (Tag::get() as $tag) {
+                $formattedTags[$tag->id . ' '] = $tag->title; //  WE NEED A SPACE not sure why they could not handle integer as value
+            }
+
+            $fields['fcrm_enrolled_tags'] = [
+                'name'      => 'fcrm_enrolled_tags',
+                'label'     => '[FluentCRM] Apply Tags on course enrollment',
+                'type'      => 'multiselect',
+                'multiple'  => true,
+                'help_text' => 'Selected tags will be applied to the contact on course enrollment',
+                'options'   => $formattedTags,
+                'value'     => (array)$tagSettings['enrolled_tags'],
+                'default'   => [],
+            ];
+
+            $fields['fcrm_completed_tags'] = [
+                'name'          => 'fcrm_completed_tags',
+                'label'         => '[FluentCRM] Apply Tags on course completion',
+                'type'          => 'multiselect',
+                'multiple'      => true,
+                'select_option' => 'Select Tags',
+                'help_text'     => 'Selected tags will be applied to the contact on course completion',
+                'options'       => $formattedTags,
+                'value'         => (array)$tagSettings['completed_tags'],
+                'default'       => [],
+            ];
+
+        } else if($metabox_key == 'learndash-group-access-settings') {
+            global $post;
+
+            if (empty($post) || empty($post->ID)) {
+                return $fields;
+            }
+
+            $tagSettings = wp_parse_args(get_post_meta($post->ID, '_fluentcrm_settings', true), [
+                'fcrm_enrolled_tags'  => [],
+                'fcrm_remove_on_leave' => 'no'
+            ]);
+
+            $formattedTags = [];
+            foreach (Tag::get() as $tag) {
+                $formattedTags[$tag->id . ' '] = $tag->title; //  WE NEED A SPACE not sure why they could not handle integer as value
+            }
+
+            $fields['fcrm_enrolled_tags'] = [
+                'name'      => 'fcrm_enrolled_tags',
+                'label'     => '[FluentCRM] Apply Tags on group enrollment',
+                'type'      => 'multiselect',
+                'multiple'  => true,
+                'help_text' => 'Selected tags will be applied to the contact on group enrollment',
+                'options'   => $formattedTags,
+                'value'     => (array)$tagSettings['fcrm_enrolled_tags'],
+                'default'   => [],
+            ];
+
+            $fields['fcrm_remove_on_leave'] = [
+                'name'          => 'fcrm_remove_on_leave',
+                'label'         => '[FluentCRM] Remove Tags on group leave',
+                'type'                => 'checkbox-switch',
+                'options'             => array(
+                    'yes' => 'selected contact tags will be removed when user leave this group',
+                    'no'   => '',
+                ),
+                'help_text'     => 'Selected tags will be applied to the contact on course completion',
+                'value'         => $tagSettings['fcrm_remove_on_leave'],
+                'default'       => '',
+            ];
         }
-
-        global $post;
-
-        if (empty($post) || empty($post->ID)) {
-            return $fields;
-        }
-
-        $tagSettings = wp_parse_args(get_post_meta($post->ID, '_fluentcrm_settings', true), [
-            'enrolled_tags'  => [],
-            'completed_tags' => []
-        ]);
-
-        $formattedTags = [];
-        foreach (Tag::get() as $tag) {
-            $formattedTags[$tag->id . ' '] = $tag->title; //  WE NEED A SPACE not sure why they could not handle integer as value
-        }
-
-        $fields['fcrm_enrolled_tags'] = [
-            'name'      => 'fcrm_enrolled_tags',
-            'label'     => '[FluentCRM] Apply Tags on course enrollment',
-            'type'      => 'multiselect',
-            'multiple'  => true,
-            'help_text' => 'Selected tags will be applied to the contact on course enrollment',
-            'options'   => $formattedTags,
-            'value'     => (array)$tagSettings['enrolled_tags'],
-            'default'   => [],
-        ];
-
-        $fields['fcrm_completed_tags'] = [
-            'name'          => 'fcrm_completed_tags',
-            'label'         => '[FluentCRM] Apply Tags on course completion',
-            'type'          => 'multiselect',
-            'multiple'      => true,
-            'select_option' => 'Select Tags',
-            'help_text'     => 'Selected tags will be applied to the contact on course completion',
-            'options'       => $formattedTags,
-            'value'         => (array)$tagSettings['completed_tags'],
-            'default'       => [],
-        ];
 
         return $fields;
+
     }
 
     public function saveCourseMetaBox($postId)
@@ -175,6 +225,29 @@ class LdInit
 
     }
 
+    public function saveGroupMetaBox($postId)
+    {
+        if (!isset($_POST['post_ID']) || $_POST['post_ID'] != $postId || (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) || !isset($_POST['post_type']) || $_POST['post_type'] != 'groups') {
+            return;
+        }
+
+        if (!empty($_POST['learndash-group-access-settings'])) {
+
+            $settings = Arr::only($_POST['learndash-group-access-settings'], ['fcrm_enrolled_tags', 'fcrm_remove_on_leave']);
+
+            $settings = wp_parse_args($settings, [
+                'fcrm_enrolled_tags'  => [],
+                'fcrm_remove_on_leave' => ''
+            ]);
+
+            if(empty($settings['fcrm_enrolled_tags'])) {
+                $settings['fcrm_enrolled_tags'] = [];
+            }
+
+            update_post_meta($postId, '_fluentcrm_settings', $settings);
+        }
+    }
+
     public function maybeCourseEnrolledTags($userId, $courseId, $accessList = [], $isRemoved = false)
     {
         if ($isRemoved) {
@@ -196,6 +269,53 @@ class LdInit
 
         Helper::createContactFromLd($userId, $tags);
         return true;
+    }
+
+    public function maybeGroupEnrolledTags($userId, $groupId)
+    {
+
+        $settings = get_post_meta($groupId, '_fluentcrm_settings', true);
+        if (!$settings || empty($settings['fcrm_enrolled_tags']) || !is_array($settings['fcrm_enrolled_tags'])) {
+            return false;
+        }
+
+        $tags = array_map(function ($tagId) {
+            return intval($tagId);
+        }, $settings['fcrm_enrolled_tags']);
+
+        $tags = array_filter($tags);
+        if (!$tags) {
+            return false;
+        }
+
+        Helper::createContactFromLd($userId, $tags);
+        return true;
+    }
+
+    public function maybeGroupLeaveTagRemove($userId, $groupId)
+    {
+        $settings = get_post_meta($groupId, '_fluentcrm_settings', true);
+        if (!$settings || empty($settings['fcrm_enrolled_tags']) || !is_array($settings['fcrm_enrolled_tags']) || Arr::get($settings, 'fcrm_remove_on_leave') != 'on') {
+            return false;
+        }
+
+        $tagsToRemove = array_map(function ($tagId) {
+            return intval($tagId);
+        }, $settings['fcrm_enrolled_tags']);
+
+        $tagsToRemove = array_filter($tagsToRemove);
+        if (!$tagsToRemove) {
+            return false;
+        }
+
+        $contact = FluentCrmApi('contacts')->getContactByUserRef($userId);
+
+        if($contact) {
+            $contact->detachTags($tagsToRemove);
+            return true;
+        }
+
+        return false;
     }
 
     public function maybeCourseCompletedTags($data)

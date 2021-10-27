@@ -2,7 +2,6 @@
 
 namespace FluentCampaign\App\Services\Integrations\LifterLms;
 
-
 use FluentCrm\App\Models\Tag;
 use FluentCrm\App\Services\Funnel\FunnelHelper;
 use FluentCrm\App\Services\Html\TableBuilder;
@@ -17,6 +16,7 @@ class LifterInit
         new \FluentCampaign\App\Services\Integrations\LifterLms\CourseCompletedTrigger();
         new \FluentCampaign\App\Services\Integrations\LifterLms\LifterCoursePurchased();
         new \FluentCampaign\App\Services\Integrations\LifterLms\LifterHasMembership();
+        new \FluentCampaign\App\Services\Integrations\LifterLms\LifterImporter();
 
         // push profile section
         add_filter('fluentcrm_profile_sections', array($this, 'pushCoursesOnProfile'));
@@ -24,11 +24,7 @@ class LifterInit
         add_filter('fluencrm_profile_section_lifter_profile_courses', array($this, 'pushCoursesContent'), 10, 2);
 
 
-        // if wp fusion installed we don't want to boot this
-        // As they have already integration with FluentCRM
-        $usingWpFusion = apply_filters('fluentcrm_using_wpfusion', defined('WP_FUSION_VERSION'));
-
-        if (!$usingWpFusion) {
+        if (!apply_filters('fluentcrm_disable_integration_metaboxes', false, 'lifterlms')) {
             /*
              * Course
              */
@@ -36,14 +32,21 @@ class LifterInit
             add_action('llms_metabox_after_save_lifterlms-course-options', array($this, 'saveCourseMetaBoxData'), 20, 1);
             add_action('llms_user_enrolled_in_course', array($this, 'maybeCourseEnrolledTags'), 50, 2);
             add_action('lifterlms_course_completed', array($this, 'maybeCourseCompletedTags'), 50, 2);
+            add_action('llms_user_removed_from_course', array($this, 'maybeRemoveCourseTagsTags'), 50, 2);
 
             // lesson
             add_filter( 'llms_metabox_fields_lifterlms_lesson', array( $this, 'addLessonMetaBox' ) );
             add_action('llms_metabox_after_save_lifterlms-lesson', array($this, 'saveLessonMetaBoxData'), 20, 1);
             add_action( 'lifterlms_lesson_completed', array( $this, 'maybeLessonCompletedTags' ), 10, 2 );
 
+            // Membership
+            add_filter('llms_metabox_fields_lifterlms_membership', array($this, 'addMembershipMetaBox'));
+            add_action('llms_metabox_after_save_lifterlms-membership', array($this, 'saveMembershipMetaBoxData'), 20, 1);
+            add_action( 'llms_user_added_to_membership_level', array( $this, 'maybeMembershipTags' ), 50, 2 );
+            add_action( 'llms_user_removed_from_membership_level', array( $this, 'maybeRemoveMembershipTags' ), 50, 2 );
         }
     }
+
 
     public function pushCoursesOnProfile($sections)
     {
@@ -141,7 +144,8 @@ class LifterInit
 
         $tagSettings = wp_parse_args(get_post_meta($post->ID, '_fluentcrm_settings', true), [
             'enrolled_tags'  => [],
-            'completed_tags' => []
+            'completed_tags' => [],
+            'remove_tags' => false
         ]);
 
         $metabox['fluentcrm'] = array(
@@ -172,11 +176,160 @@ class LifterInit
                     'type'            => 'select',
                     'value'           => $formattedTags,
                     'selected'        => $tagSettings['completed_tags'],
+                ],
+                [
+                    'type'       => 'checkbox',
+                    'label'      => __( 'Remove Tags', 'fluentcampaign-pro' ),
+                    'desc'       => __( 'Automatically remove tags defined in "Apply Tags" if course enrollment is cancelled.', 'fluentcampaign-pro' ),
+                    'id'              => '_fluentcrm_settings[remove_tags]',
+                    'class'      => '',
+                    'value'      => 'yes',
+                    'desc_class' => 'd-3of4 t-3of4 m-1of2',
+                    'default'   => (!empty($tagSettings['remove_tags'])) ? 'yes' : ''
                 ]
             ),
         );
 
         return $metabox;
+    }
+
+    public function addMembershipMetaBox($metabox)
+    {
+        global $post;
+        if ($post->post_type != 'llms_membership') {
+            return $metabox;
+        }
+
+        $formattedTags = [];
+        foreach (Tag::get() as $tag) {
+            $formattedTags[] = [
+                'key'   => $tag->id,
+                'title' => $tag->title
+            ];
+        }
+
+        $tagSettings = wp_parse_args(get_post_meta($post->ID, '_fluentcrm_settings', true), [
+            'enrolled_tags'  => [],
+            'remove_tags' => false
+        ]);
+
+        $isChecked = '';
+
+        if(!empty($tagSettings['remove_tags'])) {
+            $isChecked = 'yes';
+        }
+
+        $metabox['fluentcrm'] = array(
+            'title'  => 'FluentCRM',
+            'fields' => array(
+                [
+                    'class'           => 'select4',
+                    'data_attributes' => array(
+                        'placeholder' => 'Select Tags',
+                    ),
+                    'desc'            => __('Selected tags will be applied to the contact on membership enrollment.', 'fluentcampaign-pro'),
+                    'id'              => '_fluentcrm_settings[enrolled_tags]',
+                    'label'           => __('Apply Tags on Membership enrollment', 'fluentcampaign-pro'),
+                    'multi'           => true,
+                    'type'            => 'select',
+                    'value'           => $formattedTags,
+                    'selected'        => $tagSettings['enrolled_tags'],
+                ],
+                array(
+                    'type'       => 'checkbox',
+                    'label'      => __( 'Remove Tags', 'fluentcampaign-pro' ),
+                    'desc'       => __( 'Automatically remove tags defined in "Apply Tags" if membership is cancelled.', 'fluentcampaign-pro' ),
+                    'id'              => '_fluentcrm_settings[remove_tags]',
+                    'class'      => '',
+                    'value'      => 'yes',
+                    'desc_class' => 'd-3of4 t-3of4 m-1of2',
+                    'default'   => $isChecked
+                )
+            ),
+        );
+
+        return $metabox;
+    }
+
+    public function saveMembershipMetaBoxData($postId)
+    {
+        // Return early during quick saves and ajax requests.
+        if ( isset( $_POST['action'] ) && 'inline-save' === $_POST['action'] ) {
+            return false;
+        } elseif ( llms_is_ajax() ) {
+            return false;
+        }
+
+        $settings = [
+            'enrolled_tags'  => [],
+            'remove_tags' => false
+        ];
+
+        if (isset($_POST['_fluentcrm_settings'])) {
+            $settings = $_REQUEST['_fluentcrm_settings'];
+        }
+
+        update_post_meta($postId, '_fluentcrm_settings', $settings);
+        return $settings;
+    }
+
+    public function maybeMembershipTags($userId, $membershipId)
+    {
+        $settings = get_post_meta($membershipId, '_fluentcrm_settings', true);
+        if(!$settings || empty($settings['enrolled_tags'])) {
+            return false;
+        }
+
+        $tags = array_filter(array_map('absint', $settings['enrolled_tags']));
+
+        if(!$tags) {
+            return false;
+        }
+
+        Helper::createContactFromLifter($userId, $tags);
+
+    }
+
+    public function maybeRemoveMembershipTags($userId, $membershipId)
+    {
+        $settings = get_post_meta($membershipId, '_fluentcrm_settings', true);
+        if(!$settings || empty($settings['enrolled_tags']) || empty($settings['remove_tags'])) {
+            return false;
+        }
+
+        $tags = array_filter(array_map('absint', $settings['enrolled_tags']));
+
+        if(!$tags) {
+            return false;
+        }
+
+        $contact = FluentCrmApi('contacts')->getContactByUserRef($userId);
+
+        if($contact) {
+            $contact->detachTags($tags);
+        }
+
+    }
+
+    public function maybeRemoveCourseTagsTags($userId, $courseId)
+    {
+        $settings = get_post_meta($courseId, '_fluentcrm_settings', true);
+        if(!$settings || empty($settings['enrolled_tags']) || empty($settings['remove_tags'])) {
+            return false;
+        }
+
+        $tags = array_filter(array_map('absint', $settings['enrolled_tags']));
+
+        if(!$tags) {
+            return false;
+        }
+
+        $contact = FluentCrmApi('contacts')->getContactByUserRef($userId);
+
+        if($contact) {
+            $contact->detachTags($tags);
+        }
+
     }
 
     public function addLessonMetaBox($metabox)
@@ -231,7 +384,8 @@ class LifterInit
 
         $settings = [
             'enrolled_tags'  => [],
-            'completed_tags' => []
+            'completed_tags' => [],
+            'remove_tags' => false
         ];
 
         if (isset($_POST['_fluentcrm_settings'])) {

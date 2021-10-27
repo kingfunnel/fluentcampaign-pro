@@ -23,12 +23,29 @@ class DynamicSegmentController extends Controller
     public function getSegment(Request $request, $slug, $id = 0)
     {
         $segment = apply_filters('fluentcrm_dynamic_segment_' . $slug, null, $id, [
-            'subscribers' => true,
-            'paginate'    => true
+            'subscribers' => false,
+            'paginate'    => false,
+            'model'       => true
         ]);
 
+        $model = $segment['model'];
+
+        $model->when($this->request->has('sort_by'), function ($query) {
+            $query->orderBy($this->request->get('sort_by'), $this->request->get('sort_type'));
+        });
+
+        $subscribers = $model->with(['tags', 'lists'])->paginate();
+
+        if ($this->request->get('custom_fields') == 'true') {
+            // we have to include custom fields
+            foreach ($subscribers as $subscriber) {
+                $subscriber->custom_fields = $subscriber->custom_fields();
+            }
+        }
+
         return $this->sendSuccess([
-            'segment' => $segment
+            'segment'     => $segment,
+            'subscribers' => $subscribers
         ]);
     }
 
@@ -128,7 +145,7 @@ class DynamicSegmentController extends Controller
                         'is_multiple' => true,
                         'label'       => __('Tags', 'fluentcampaign-pro'),
                         'operators'   => [
-                            'whereIn' => 'In',
+                            'whereIn'    => 'In',
                             'whereNotIn' => 'Not In'
                         ],
                         'value'       => [],
@@ -139,7 +156,7 @@ class DynamicSegmentController extends Controller
                         'is_multiple' => true,
                         'label'       => __('Lists', 'fluentcampaign-pro'),
                         'operators'   => [
-                            'whereIn' => 'In',
+                            'whereIn'    => 'In',
                             'whereNotIn' => 'Not In'
                         ],
                         'value'       => [],

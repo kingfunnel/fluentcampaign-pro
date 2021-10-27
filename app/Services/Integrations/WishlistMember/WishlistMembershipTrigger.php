@@ -16,7 +16,7 @@ class WishlistMembershipTrigger extends BaseTrigger
         $this->actionArgNum = 2;
         parent::__construct();
     }
-
+    
     public function getTrigger()
     {
         return [
@@ -74,7 +74,7 @@ class WishlistMembershipTrigger extends BaseTrigger
                 'type'        => 'multi-select',
                 'label'       => __('Target Membership Levels', 'fluentcampaign-pro'),
                 'help'        => __('Select for which Membership Levels this automation will run', 'fluentcampaign-pro'),
-                'options'     => $this->getMembershipLevels(),
+                'options'     => Helper::getMembershipLevels(),
                 'inline_help' => __('Keep it blank to run to any Level Enrollment', 'fluentcampaign-pro')
             ],
             'run_multiple' => [
@@ -144,19 +144,5 @@ class WishlistMembershipTrigger extends BaseTrigger
         }
 
         return true;
-    }
-
-    private function getMembershipLevels()
-    {
-        $levels = \wlmapi_get_levels();
-        $formattedLevels = [];
-        foreach (Arr::get($levels, 'levels.level') as $level) {
-            $formattedLevels[] = [
-                'id' => strval($level['id']),
-                'title' => $level['name']
-            ];
-        }
-
-        return $formattedLevels;
     }
 }

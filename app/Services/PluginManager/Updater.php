@@ -74,7 +74,7 @@ class Updater
         add_filter('plugins_api', array($this, 'plugins_api_filter'), 10, 3);
         remove_action( 'after_plugin_row_' . $this->name, 'wp_plugin_update_row' );
 
-        add_action( 'after_plugin_row_' . $this->name, [ $this, 'show_update_notification' ], 10, 2 );
+    //    add_action( 'after_plugin_row_' . $this->name, [ $this, 'show_update_notification' ], 10, 2 );
 
     }
 
@@ -187,7 +187,11 @@ class Updater
             return $_data;
         }
 
-        if (!isset($_args->slug) || ($_args->slug != $this->slug)) {
+        if(!isset($_args->slug)) {
+            return $_data;
+        }
+
+        if(!in_array($_args->slug, [$this->slug, 'fluentcrm-campaign-pro'])) {
             return $_data;
         }
 
@@ -284,6 +288,7 @@ class Updater
         }
         if ($request && isset($request->sections)) {
             $request->sections = maybe_unserialize($request->sections);
+            $request->slug = $this->slug;
         } else {
             $request = false;
         }
@@ -315,7 +320,7 @@ class Updater
         if ($response && isset($response->sections['changelog'])) {
             echo '<div style="background:#fff;padding:10px;">' . $response->sections['changelog'] . '</div>';
         }
-
+        
         exit;
     }
 

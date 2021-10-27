@@ -156,6 +156,7 @@ class SubscriptionExpiredTrigger extends BaseTrigger
             if($level->period_type == 'lifetime') {
                 continue;
             }
+
             $formattedLevels[] = [
                 'id' => strval($level->ID),
                 'title' => $level->post_title

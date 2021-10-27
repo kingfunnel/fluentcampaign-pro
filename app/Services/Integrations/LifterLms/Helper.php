@@ -125,6 +125,44 @@ class Helper
 
     }
 
+    public static function getUserMemberships($userId)
+    {
+        $student = llms_get_student($userId);
+        if(!$student) {
+            return [];
+        }
+
+        $memberships = $student->get_memberships([
+            'limit' => 10000,
+            'status' => 'enrolled'
+        ]);
+
+        if(!$memberships || !empty($memberships['results'])) {
+            return [];
+        }
+
+        return $memberships['results'];
+    }
+
+    public static function getUserCourses($userId)
+    {
+        $student = llms_get_student($userId);
+        if(!$student) {
+            return [];
+        }
+
+        $courses = $student->get_courses([
+            'limit' => 10000,
+            'status' => 'enrolled'
+        ]);
+
+        if(!$courses || !empty($courses['results'])) {
+            return [];
+        }
+
+        return $courses['results'];
+    }
+
     public static function isInActiveMembership($membershipIds, $subscriber)
     {
         if(!$membershipIds) {
@@ -141,21 +179,9 @@ class Helper
             }
         }
 
-        $student = llms_get_student($userId);
-        if(!$student) {
-            return false;
-        }
+        $memberships = self::getUserMemberships($userId);
 
-        $memberships = $student->get_memberships([
-            'limit' => 10000,
-            'status' => 'enrolled'
-        ]);
-
-        if(!$memberships || !empty($memberships['results'])) {
-            return false;
-        }
-
-        return !!array_intersect($memberships['results'], $membershipIds);
+        return !!array_intersect($memberships, $membershipIds);
     }
 
     public static function createContactFromLifter($userId, $tags = [])

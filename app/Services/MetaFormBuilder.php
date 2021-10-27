@@ -78,4 +78,24 @@ class MetaFormBuilder
         </tr>
         <?php
     }
+
+    public function initMultiSelect($selector = '', $placeholder = 'Select')
+    {
+        wp_enqueue_script('multiple-select', fluentCrmMix('libs/multiple-select/multiple-select.min.js'), ['jquery'], '1.5.2');
+        wp_enqueue_style('multiple-select', fluentCrmMix('libs/multiple-select/multiple-select.min.css'));
+
+        if($selector) {
+            add_action('admin_footer', function () use ($selector, $placeholder) {
+                ?>
+                <script>
+                    jQuery(document).ready(function ($) {
+                        jQuery('<?php echo $selector; ?>').multipleSelect({
+                            placeholder: '<?php echo $placeholder;  ?>'
+                        });
+                    });
+                </script>
+                <?php
+            });
+        }
+    }
 }

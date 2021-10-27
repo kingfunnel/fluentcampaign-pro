@@ -118,6 +118,10 @@ class CheckUserPropCondition extends BaseCondition
                 'label'   => __('Contact Type', 'fluentcampaign-pro'),
                 'type'    => 'select',
                 'options' => $formattedContactTypes
+            ],
+            'user_id' => [
+                'label' => 'User ID (WP)',
+                'type' => 'number'
             ]
         ];
 

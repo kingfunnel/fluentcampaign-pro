@@ -4,7 +4,6 @@ namespace FluentCampaign\App\Services\Integrations\ElementorFormIntegration;
 
 use \Elementor\Controls_Manager;
 use ElementorPro\Modules\Forms\Classes\Integration_Base;
-use \ElementorPro\Modules\Forms\Controls\Fields_Map;
 use FluentCrm\App\Models\CustomContactField;
 use FluentCrm\Includes\Helpers\Arr;
 

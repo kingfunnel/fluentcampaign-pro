@@ -4,7 +4,7 @@ Tags: fluentcrm
 Requires at least: 4.5
 Tested up to: 5.8.0
 Requires PHP: 5.6
-Stable tag: 2.2.0
+Stable tag: 2.3.0
 
 FluentCRM Pro Version
 
@@ -24,6 +24,19 @@ Manual Install:
 Upload the plugin files to the /wp-content/plugins/ directory, then activate the plugin.
 
 == Change Log ==
+
+= 2.3.1 (Date: July 20, 2021) =
+* BuddyBoss/BuddyPress Integration
+* ThriveCart Integration (Addon)
+* LearnPress Integration
+* Dynamically Import Existing users from LMS/Membership/BuddyBoss
+* Email Editor Improvement
+* Persistent Contact Page
+* Dynamic Segment Improvement and Bulk Operations
+* Automation Funnel Improvement
+* Integration improvements
+* ... and so many new features and improvements
+
 
 = 2.2.0 (Date: July 20, 2021) =
 * Whole New Dashboard Design

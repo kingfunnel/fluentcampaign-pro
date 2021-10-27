@@ -94,6 +94,8 @@ class MembershipTrigger extends BaseTrigger
         $productId = $txn->product_id;
         $userId = $txn->user_id;
 
+        error_log(__METHOD__.' '. $productId .' '. $userId);
+
         if(!$productId || !$userId) {
             return;
         }

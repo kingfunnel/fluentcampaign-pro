@@ -25,7 +25,6 @@ abstract class BaseSegment
         }, $this->priority);
 
         add_filter('fluentcrm_dynamic_segment_'.$this->slug, array($this, 'getSegmentDetails'), 10, 3);
-
     }
 
     abstract public function getInfo();

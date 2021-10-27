@@ -27,6 +27,8 @@ class EmailScheduleHandler
             } else {
                 $tracker->status = 'completed';
                 $tracker->save();
+
+                do_action('fluentcrm_email_sequence_completed', $tracker->subscriber_id, $tracker->campaign_id);
             }
         }
     }

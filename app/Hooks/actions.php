@@ -3,9 +3,10 @@
  * @var $app \FluentCrm\Includes\Core\Application
  */
 
+(new \FluentCampaign\App\Hooks\Handlers\IntegrationHandler())->init();
+
 add_action('init', function () {
     (new \FluentCampaign\App\Hooks\Handlers\DynamicSegment())->init();
-    (new \FluentCampaign\App\Hooks\Handlers\IntegrationHandler())->init();
 }, 1);
 
 /*
@@ -20,6 +21,7 @@ $app->addAction('fluentcrm_scheduled_maybe_regular_tasks', 'FluentCampaign\App\H
 
 $app->addAction('wp_ajax_fluentcrm_export_contacts', 'FluentCampaign\App\Hooks\Handlers\DataExporter@exportContacts');
 $app->addAction('wp_ajax_fluentcrm_import_funnel', 'FluentCampaign\App\Hooks\Handlers\DataExporter@importFunnel');
+$app->addAction('wp_ajax_fluentcrm_export_notes', 'FluentCampaign\App\Hooks\Handlers\DataExporter@exportNotes');
 
 add_action('admin_init', function () {
     $licenseManager = new \FluentCampaign\App\Services\PluginManager\LicenseManager();

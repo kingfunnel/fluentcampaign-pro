@@ -18,6 +18,11 @@ class EddInit
         add_action('edd_update_payment_status', array($this, 'maybeRecordPayment'), 10, 3);
 
         add_action('edd_view_order_details_sidebar_after', array($this, 'printCrmProfileWidget'));
+
+        if (!apply_filters('fluentcrm_disable_integration_metaboxes', false, 'edd')) {
+            (new \FluentCampaign\App\Services\Integrations\Edd\EddMetaBoxes())->init();
+        }
+
     }
 
     public function pushStats($stats)

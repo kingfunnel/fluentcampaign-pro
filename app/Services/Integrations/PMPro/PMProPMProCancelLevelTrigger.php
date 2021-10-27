@@ -74,7 +74,7 @@ class PMProPMProCancelLevelTrigger extends BaseTrigger
                 'type'        => 'multi-select',
                 'label'       => __('Target Membership Levels', 'fluentcampaign-pro'),
                 'help'        => __('Select for which Membership Levels this automation will run', 'fluentcampaign-pro'),
-                'options'     => $this->getMembershipLevels(),
+                'options'     => Helper::getMembershipLevels(),
                 'inline_help' => __('Keep it blank to run to any Level cancellation', 'fluentcampaign-pro')
             ],
             'run_multiple'   => [
@@ -145,19 +145,5 @@ class PMProPMProCancelLevelTrigger extends BaseTrigger
         }
 
         return true;
-    }
-
-    private function getMembershipLevels()
-    {
-        $levels = \pmpro_getAllLevels(false, false);
-        $formattedLevels = [];
-        foreach ($levels as $level) {
-            $formattedLevels[] = [
-                'id'    => strval($level->id),
-                'title' => $level->name
-            ];
-        }
-
-        return $formattedLevels;
     }
 }

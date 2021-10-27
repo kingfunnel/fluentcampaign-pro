@@ -50,7 +50,8 @@ class DynamicSegment
         $segment = apply_filters('fluentcrm_dynamic_segment_' . $slug, [], $segmentId, [
             'paginate'    => false,
             'subscribers' => false,
-            'model'       => true
+            'model'       => true,
+            'contact_count' => true
         ]);
 
         if (!$segment) {

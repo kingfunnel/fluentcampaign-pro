@@ -124,7 +124,6 @@ class WooOrderStatusChangeTrigger extends BaseTrigger
 
         $willProcess = $this->isProcessable($funnel, $subscriberData, $fromStatus, $toStatus);
 
-
         $willProcess = apply_filters('fluentcrm_funnel_will_process_' . $this->triggerName, $willProcess, $funnel, $subscriberData, $originalArgs);
         if (!$willProcess) {
             return false;

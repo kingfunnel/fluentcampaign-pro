@@ -5,7 +5,7 @@
 define('FLUENTCAMPAIGN', 'fluentcampaign');
 define('FLUENTCAMPAIGN_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('FLUENTCAMPAIGN_PLUGIN_PATH', plugin_dir_path(__FILE__));
-define('FLUENTCAMPAIGN_PLUGIN_VERSION', '2.2.0');
+define('FLUENTCAMPAIGN_PLUGIN_VERSION', '2.3.1');
 
 spl_autoload_register(function ($class) {
 

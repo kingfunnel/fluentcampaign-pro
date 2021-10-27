@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FluentCRM Pro\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-20 12:53+0000\n"
+"POT-Creation-Date: 2021-10-25 15:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -83,7 +83,7 @@ msgstr ""
 msgid "Active Affiliates who are also in the contact list as subscribed"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:123
+#: app/Http/Controllers/DynamicSegmentController.php:140
 msgid ""
 "Activity on your site login, email link click or various other activities"
 msgstr ""
@@ -123,15 +123,15 @@ msgstr ""
 msgid "Added to resend from failed"
 msgstr ""
 
-#: app/Hooks/Handlers/DataExporter.php:192
+#: app/Hooks/Handlers/DataExporter.php:227
 msgid "Address Line 1"
 msgstr ""
 
-#: app/Hooks/Handlers/DataExporter.php:193
+#: app/Hooks/Handlers/DataExporter.php:228
 msgid "Address Line 2"
 msgstr ""
 
-#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:24
+#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:48
 msgid "AffiliateWP - New Affiliate Approved/Active Register"
 msgstr ""
 
@@ -163,7 +163,7 @@ msgstr ""
 #: app/Services/Integrations/TutorLms/CourseEnrollTrigger.php:51
 #: app/Services/Integrations/MemberPress/MembershipTrigger.php:51
 #: app/Services/Integrations/MemberPress/SubscriptionExpiredTrigger.php:51
-#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:51
+#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:75
 #: app/Services/Funnel/Triggers/UserLoginTrigger.php:45
 msgid "An Automated double-optin email will be sent for new subscribers"
 msgstr ""
@@ -177,26 +177,41 @@ msgstr ""
 msgid "Any type of purchase"
 msgstr ""
 
-#: app/Services/Integrations/LifterLms/LifterInit.php:213
+#: app/Services/Integrations/BuddyPress/Group.php:34
+#: app/Services/Integrations/BuddyPress/BBMemberType.php:57
+#: app/Services/Integrations/Edd/EddMetaBoxes.php:49
+#: app/Services/Integrations/Edd/EddMetaBoxes.php:103
+msgid "Apply Tags"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterInit.php:366
 msgid "Apply Tags on Course Completed"
 msgstr ""
 
-#: app/Services/Integrations/LifterLms/LifterInit.php:170
-#: app/Services/Integrations/TutorLms/TutorLmsInit.php:140
+#: app/Services/Integrations/LearnPress/LearnPressInit.php:149
+msgid "Apply Tags on Course Completion"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterInit.php:174
+#: app/Services/Integrations/TutorLms/TutorLmsInit.php:141
 msgid "Apply Tags on course completion"
 msgstr ""
 
-#: app/Services/Integrations/LifterLms/LifterInit.php:157
-#: app/Services/Integrations/TutorLms/TutorLmsInit.php:126
+#: app/Services/Integrations/LearnPress/LearnPressInit.php:130
+msgid "Apply Tags on Course Enrollment"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterInit.php:161
+#: app/Services/Integrations/TutorLms/TutorLmsInit.php:127
 msgid "Apply Tags on course enrollment"
 msgstr ""
 
-#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:48
-msgid "Assign to Lists"
+#: app/Services/Integrations/LearnPress/LearnPressInit.php:186
+msgid "Apply Tags on Lesson Completion"
 msgstr ""
 
-#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:55
-msgid "Assign to Tags"
+#: app/Services/Integrations/LifterLms/LifterInit.php:232
+msgid "Apply Tags on Membership enrollment"
 msgstr ""
 
 #: app/Http/Controllers/ManagerController.php:135
@@ -206,6 +221,28 @@ msgstr ""
 #: app/Http/Controllers/ManagerController.php:62
 #: app/Http/Controllers/ManagerController.php:103
 msgid "Associate user could not be found with this email"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterInit.php:183
+msgid ""
+"Automatically remove tags defined in \"Apply Tags\" if course enrollment is "
+"cancelled."
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterInit.php:241
+msgid ""
+"Automatically remove tags defined in \"Apply Tags\" if membership is "
+"cancelled."
+msgstr ""
+
+#: app/Services/Integrations/BuddyPress/BBInit.php:29
+#: app/Services/Integrations/BuddyPress/BBInit.php:50
+msgid "BuddyBoss Groups"
+msgstr ""
+
+#: app/Services/Integrations/BuddyPress/BBInit.php:26
+#: app/Services/Integrations/BuddyPress/BBInit.php:47
+msgid "BuddyPress Groups"
 msgstr ""
 
 #: app/Services/Funnel/Actions/RemoveFromFunnelAction.php:23
@@ -227,11 +264,13 @@ msgstr ""
 
 #: app/Services/Integrations/WooCommerce/OrderStatusChangeAction.php:22
 #: app/Services/Integrations/WooCommerce/OrderStatusChangeAction.php:44
+#: app/Services/Integrations/WooCommerce/CreateCouponAction.php:51
 msgid "Change Order Status"
 msgstr ""
 
 #: app/Services/Integrations/WooCommerce/OrderStatusChangeAction.php:23
 #: app/Services/Integrations/WooCommerce/OrderStatusChangeAction.php:45
+#: app/Services/Integrations/WooCommerce/CreateCouponAction.php:52
 msgid "Change status of the current order in WooCommerce"
 msgstr ""
 
@@ -307,8 +346,8 @@ msgid ""
 "Check If user purchased selected products and run sequences conditionally"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:83
-#: app/Hooks/Handlers/DataExporter.php:195
+#: app/Http/Controllers/DynamicSegmentController.php:100
+#: app/Hooks/Handlers/DataExporter.php:230
 #: app/Services/Funnel/Conditions/CheckUserPropCondition.php:104
 msgid "City"
 msgstr ""
@@ -355,7 +394,7 @@ msgstr ""
 msgid "Conditionally check if contact is in a group"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:60
+#: app/Http/Controllers/DynamicSegmentController.php:77
 msgid "Conditions"
 msgstr ""
 
@@ -383,7 +422,7 @@ msgstr ""
 msgid "Contact Data"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:65
+#: app/Http/Controllers/DynamicSegmentController.php:82
 msgid "Contact Email"
 msgstr ""
 
@@ -395,7 +434,7 @@ msgstr ""
 msgid "Contact Source"
 msgstr ""
 
-#: app/Hooks/Handlers/DataExporter.php:201
+#: app/Hooks/Handlers/DataExporter.php:236
 #: app/Services/Funnel/Conditions/CheckUserPropCondition.php:118
 #: app/Services/Funnel/Actions/UpdateContactPropertyAction.php:181
 msgid "Contact Type"
@@ -409,12 +448,20 @@ msgstr ""
 msgid "Copy This Link"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:97
-#: app/Hooks/Handlers/DataExporter.php:197
+#: app/Http/Controllers/DynamicSegmentController.php:114
+#: app/Hooks/Handlers/DataExporter.php:232
 #: app/Services/Integrations/WooCommerce/WooConditions.php:157
 #: app/Services/Funnel/Conditions/CheckUserPropCondition.php:112
 #: app/Services/Funnel/Actions/UpdateContactPropertyAction.php:191
 msgid "Country"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/CreateCouponAction.php:22
+msgid "Create Coupon"
+msgstr ""
+
+#: app/Services/Integrations/WooCommerce/CreateCouponAction.php:23
+msgid "Create Coupon Code"
 msgstr ""
 
 #: app/Services/Funnel/Actions/UserRegistrationAction.php:45
@@ -432,12 +479,11 @@ msgid ""
 "email"
 msgstr ""
 
-#: app/Hooks/Handlers/DataExporter.php:205
-#: app/Hooks/Handlers/DataExporter.php:206
+#: app/Hooks/Handlers/DataExporter.php:240
 msgid "Created At"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:117
+#: app/Http/Controllers/DynamicSegmentController.php:134
 msgid "Created at"
 msgstr ""
 
@@ -445,7 +491,7 @@ msgstr ""
 msgid "Custom Segments with custom filters on Subscriber data"
 msgstr ""
 
-#: app/Hooks/Handlers/DataExporter.php:203
+#: app/Hooks/Handlers/DataExporter.php:238
 msgid "Date Of Birth"
 msgstr ""
 
@@ -469,7 +515,7 @@ msgstr ""
 msgid "EDD customers who are also in the contact list as subscribed"
 msgstr ""
 
-#: app/Hooks/Handlers/DataExporter.php:190
+#: app/Hooks/Handlers/DataExporter.php:225
 #: app/Services/Funnel/Conditions/CheckUserPropCondition.php:100
 msgid "Email"
 msgstr ""
@@ -478,12 +524,17 @@ msgstr ""
 msgid "Email has been resent"
 msgstr ""
 
+#: app/Services/Funnel/Benchmarks/EmailSequenceCompletedBenchmark.php:23
+#: app/Services/Funnel/Benchmarks/EmailSequenceCompletedBenchmark.php:37
+msgid "Email Sequence Completed"
+msgstr ""
+
 #: app/Http/Controllers/SequenceController.php:175
 #: app/Http/Controllers/SequenceMailController.php:113
 msgid "Email sequence successfully deleted"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:158
+#: app/Http/Controllers/DynamicSegmentController.php:175
 msgid "Enable Last Email Activity Filter"
 msgstr ""
 
@@ -527,18 +578,18 @@ msgstr ""
 msgid "Enrolls in a Group"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:153
+#: app/Http/Controllers/DynamicSegmentController.php:170
 msgid "Filter By Email Activities"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:154
+#: app/Http/Controllers/DynamicSegmentController.php:171
 msgid ""
 "Filter your contacts by from email open or email link click metrics. Leave "
 "the values blank for not applying"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:71
-#: app/Hooks/Handlers/DataExporter.php:188
+#: app/Http/Controllers/DynamicSegmentController.php:88
+#: app/Hooks/Handlers/DataExporter.php:223
 #: app/Services/Funnel/Conditions/CheckUserPropCondition.php:92
 msgid "First Name"
 msgstr ""
@@ -547,17 +598,18 @@ msgstr ""
 msgid "Fluent CRM"
 msgstr ""
 
-#: app/Services/Integrations/WooCommerce/WooProductAdmin.php:53
+#: app/Services/Integrations/WooCommerce/WooProductAdmin.php:47
 #: app/Services/Integrations/ElementorFormIntegration/FormWidget.php:31
 #: app/Services/Integrations/ElementorFormIntegration/FormWidget.php:39
+#: app/Services/Integrations/BuddyPress/Group.php:15
 msgid "FluentCRM"
 msgstr ""
 
-#: app/Services/Integrations/TutorLms/TutorLmsInit.php:103
+#: app/Services/Integrations/TutorLms/TutorLmsInit.php:104
 msgid "FluentCRM - Course Tags"
 msgstr ""
 
-#: app/Services/Integrations/WooCommerce/WooProductAdmin.php:85
+#: app/Services/Integrations/WooCommerce/WooProductAdmin.php:79
 msgid "FluentCRM Integration"
 msgstr ""
 
@@ -566,8 +618,15 @@ msgid "FluentCRM Pro"
 msgstr ""
 
 #: app/Services/Integrations/WooCommerce/WooInit.php:140
-#: app/Services/Integrations/Edd/EddInit.php:113
+#: app/Services/Integrations/Edd/EddInit.php:118
 msgid "FluentCRM Profile"
+msgstr ""
+
+#: app/Services/Integrations/LearnPress/LearnPressInit.php:105
+#: app/Services/Integrations/LearnPress/LearnPressInit.php:109
+#: app/Services/Integrations/BuddyPress/BBMemberType.php:218
+#: app/Services/Integrations/Edd/EddMetaBoxes.php:29
+msgid "FluentCRM Settings"
 msgstr ""
 
 #: app/Services/Integrations/WooCommerce/WooOrderSuccessBenchmark.php:74
@@ -608,7 +667,7 @@ msgstr ""
 msgid "https://fluentcrm.com"
 msgstr ""
 
-#: app/Hooks/Handlers/DataExporter.php:185
+#: app/Hooks/Handlers/DataExporter.php:220
 msgid "ID"
 msgstr ""
 
@@ -660,10 +719,9 @@ msgstr ""
 #: app/Services/Integrations/LearnDash/LessonCompletedTrigger.php:76
 #: app/Services/Integrations/LearnDash/CourseCompletedTrigger.php:75
 #: app/Services/Integrations/LearnDash/CourseEnrollTrigger.php:78
-#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:82
 #: app/Services/Integrations/TutorLms/CourseCompletedTrigger.php:75
 #: app/Services/Integrations/TutorLms/CourseEnrollTrigger.php:76
-#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:74
+#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:98
 msgid "If Contact Already Exist?"
 msgstr ""
 
@@ -722,16 +780,42 @@ msgid ""
 "exist"
 msgstr ""
 
+#: app/Services/Integrations/RCP/RCPImporter.php:138
+#: app/Services/Integrations/PMPro/PMProImporter.php:138
+#: app/Services/Integrations/BuddyPress/BbImporter.php:202
+#: app/Services/Integrations/WishlistMember/WishlistMemberImporter.php:137
+#, php-format
+msgid "Import %s Members Now"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterImporter.php:181
+#: app/Services/Integrations/LearnPress/LearnPressImporter.php:131
+#: app/Services/Integrations/LearnDash/LearnDashImporter.php:183
+#: app/Services/Integrations/TutorLms/TutorImporter.php:137
+#, php-format
+msgid "Import %s Students Now"
+msgstr ""
+
+#: app/Services/Integrations/RCP/RCPImporter.php:110
+#: app/Services/Integrations/LifterLms/LifterImporter.php:134
+#: app/Services/Integrations/LearnPress/LearnPressImporter.php:103
+#: app/Services/Integrations/PMPro/PMProImporter.php:110
+#: app/Services/Integrations/LearnDash/LearnDashImporter.php:136
+#: app/Services/Integrations/WishlistMember/WishlistMemberImporter.php:109
+#: app/Services/Integrations/TutorLms/TutorImporter.php:109
+msgid "Import by"
+msgstr ""
+
 #: app/Http/Controllers/CampaignsProController.php:159
 msgid "invalid selection"
 msgstr ""
 
-#: app/Hooks/Handlers/DataExporter.php:198
+#: app/Hooks/Handlers/DataExporter.php:233
 msgid "IP Address"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:164
-#: app/Http/Controllers/DynamicSegmentController.php:170
+#: app/Http/Controllers/DynamicSegmentController.php:181
+#: app/Http/Controllers/DynamicSegmentController.php:187
 msgid "Keep days 0/Blank for disable"
 msgstr ""
 
@@ -759,7 +843,6 @@ msgstr ""
 #: app/Services/Integrations/LifterLms/LessonCompletedTrigger.php:89
 #: app/Services/Integrations/LifterLms/CourseCompletedTrigger.php:85
 #: app/Services/Integrations/LearnDash/CourseCompletedTrigger.php:85
-#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:92
 msgid "Keep it blank to run to any Lesson"
 msgstr ""
 
@@ -806,24 +889,24 @@ msgstr ""
 msgid "Keep it blank to run to any Topic for that lesson"
 msgstr ""
 
-#: app/Hooks/Handlers/DataExporter.php:204
+#: app/Hooks/Handlers/DataExporter.php:239
 msgid "Last Activity"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:122
+#: app/Http/Controllers/DynamicSegmentController.php:139
 msgid "Last Contact Activity"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:168
+#: app/Http/Controllers/DynamicSegmentController.php:185
 msgid "Last Email Link Clicked"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:162
+#: app/Http/Controllers/DynamicSegmentController.php:179
 msgid "Last Email Open"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:77
-#: app/Hooks/Handlers/DataExporter.php:189
+#: app/Http/Controllers/DynamicSegmentController.php:94
+#: app/Hooks/Handlers/DataExporter.php:224
 #: app/Services/Funnel/Conditions/CheckUserPropCondition.php:96
 msgid "Last Name"
 msgstr ""
@@ -850,8 +933,8 @@ msgstr ""
 msgid "List Removed"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:140
-#: app/Hooks/Handlers/DataExporter.php:207
+#: app/Http/Controllers/DynamicSegmentController.php:157
+#: app/Hooks/Handlers/DataExporter.php:242
 msgid "Lists"
 msgstr ""
 
@@ -867,15 +950,15 @@ msgstr ""
 msgid "Manager has been updated"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:177
+#: app/Http/Controllers/DynamicSegmentController.php:194
 msgid "Match Any One Condition"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:176
+#: app/Http/Controllers/DynamicSegmentController.php:193
 msgid "Match Both Open and Click Condition"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:173
+#: app/Http/Controllers/DynamicSegmentController.php:190
 msgid "Match Type"
 msgstr ""
 
@@ -901,7 +984,7 @@ msgstr ""
 msgid "Membership Level Expiration"
 msgstr ""
 
-#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:39
+#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:63
 msgid "New Affiliate Approved/Active Register"
 msgstr ""
 
@@ -995,12 +1078,12 @@ msgstr ""
 msgid "Payment Refunded in EDD"
 msgstr ""
 
-#: app/Hooks/Handlers/DataExporter.php:199
+#: app/Hooks/Handlers/DataExporter.php:234
 msgid "Phone"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:219
-#: app/Http/Controllers/DynamicSegmentController.php:247
+#: app/Http/Controllers/DynamicSegmentController.php:236
+#: app/Http/Controllers/DynamicSegmentController.php:264
 msgid "Please provide segment title"
 msgstr ""
 
@@ -1010,6 +1093,10 @@ msgstr ""
 
 #: app/Services/Funnel/Benchmarks/LinkClickBenchmark.php:55
 msgid "Please save to get the sharable link"
+msgstr ""
+
+#: app/Services/Funnel/Benchmarks/EmailSequenceCompletedBenchmark.php:45
+msgid "Please select the email sequences that need to be watched for completed"
 msgstr ""
 
 #: app/Services/Integrations/LifterLms/LessonCompletedTrigger.php:80
@@ -1024,16 +1111,15 @@ msgstr ""
 #: app/Services/Integrations/LearnDash/CourseEnrollTrigger.php:79
 #: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:79
 #: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:80
-#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:83
 #: app/Services/Integrations/TutorLms/CourseCompletedTrigger.php:76
 #: app/Services/Integrations/TutorLms/CourseEnrollTrigger.php:77
-#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:75
+#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:99
 msgid ""
 "Please specify what will happen if the subscriber already exist in the "
 "database"
 msgstr ""
 
-#: app/Hooks/Handlers/DataExporter.php:194
+#: app/Hooks/Handlers/DataExporter.php:229
 msgid "Postal Code"
 msgstr ""
 
@@ -1072,6 +1158,24 @@ msgstr ""
 
 #: app/Services/Integrations/CRM/RemoveFromTagTrigger.php:45
 msgid "Remove From Tags"
+msgstr ""
+
+#: app/Services/Integrations/Edd/EddMetaBoxes.php:121
+msgid "Remove selected Tags on refund"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterInit.php:182
+#: app/Services/Integrations/LifterLms/LifterInit.php:240
+msgid "Remove Tags"
+msgstr ""
+
+#: app/Services/Integrations/BuddyPress/Group.php:47
+#: app/Services/Integrations/BuddyPress/BBMemberType.php:76
+msgid "Remove Tags on leave defined in \"Apply Tags\""
+msgstr ""
+
+#: app/Services/Integrations/Edd/EddMetaBoxes.php:68
+msgid "Remove Tags on refund defined in \"Apply Tags\""
 msgstr ""
 
 #: app/Services/Funnel/Actions/ChangeUserRoleAction.php:49
@@ -1137,12 +1241,55 @@ msgstr ""
 msgid "Schedule Campaign Email"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:236
+#: app/Http/Controllers/DynamicSegmentController.php:253
 msgid "Segment has been created"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:266
+#: app/Http/Controllers/DynamicSegmentController.php:283
 msgid "Segment has been updated"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterImporter.php:151
+#: app/Services/Integrations/LifterLms/LifterImporter.php:153
+#: app/Services/Integrations/LearnPress/LearnPressImporter.php:116
+#: app/Services/Integrations/LearnPress/LearnPressImporter.php:118
+#: app/Services/Integrations/LearnDash/LearnDashImporter.php:153
+#: app/Services/Integrations/LearnDash/LearnDashImporter.php:155
+#: app/Services/Integrations/TutorLms/TutorImporter.php:122
+#: app/Services/Integrations/TutorLms/TutorImporter.php:124
+#, php-format
+msgid "Select %s Course"
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterImporter.php:166
+#: app/Services/Integrations/LearnDash/LearnDashImporter.php:168
+#: app/Services/Integrations/LearnDash/LearnDashImporter.php:170
+#: app/Services/Integrations/BuddyPress/BbImporter.php:187
+#: app/Services/Integrations/BuddyPress/BbImporter.php:189
+#, php-format
+msgid "Select %s Group"
+msgstr ""
+
+#: app/Services/Integrations/BuddyPress/BbImporter.php:155
+#, php-format
+msgid "Select %s Import Type"
+msgstr ""
+
+#: app/Services/Integrations/BuddyPress/BbImporter.php:172
+#: app/Services/Integrations/BuddyPress/BbImporter.php:174
+#, php-format
+msgid "Select %s Member Type"
+msgstr ""
+
+#: app/Services/Integrations/RCP/RCPImporter.php:123
+#: app/Services/Integrations/RCP/RCPImporter.php:125
+#: app/Services/Integrations/LifterLms/LifterImporter.php:168
+#: app/Services/Integrations/PMPro/PMProImporter.php:123
+#: app/Services/Integrations/PMPro/PMProImporter.php:125
+#: app/Services/Integrations/WishlistMember/WishlistMemberImporter.php:122
+#: app/Services/Integrations/WishlistMember/WishlistMemberImporter.php:124
+#, php-format
+msgid "Select %s Membership"
 msgstr ""
 
 #: app/Services/Funnel/Actions/AddActivityAction.php:52
@@ -1165,7 +1312,7 @@ msgstr ""
 msgid "Select Campaign Email"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:61
+#: app/Http/Controllers/DynamicSegmentController.php:78
 msgid ""
 "Select conditions which will define this segment. All Conditions will be "
 "applied to filter"
@@ -1194,7 +1341,6 @@ msgid "Select for which groups this automation will run"
 msgstr ""
 
 #: app/Services/Integrations/LifterLms/LessonCompletedTrigger.php:86
-#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:89
 msgid "Select for which Lessons this automation will run"
 msgstr ""
 
@@ -1261,7 +1407,6 @@ msgstr ""
 #: app/Services/Integrations/CRM/ListAppliedTrigger.php:51
 #: app/Services/Integrations/CRM/RemoveFromListTrigger.php:52
 #: app/Services/Integrations/ElementorFormIntegration/FormWidget.php:58
-#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:49
 #: app/Services/Funnel/Conditions/HasListCondition.php:42
 msgid "Select Lists"
 msgstr ""
@@ -1279,6 +1424,7 @@ msgstr ""
 msgid "Select Sequence Email"
 msgstr ""
 
+#: app/Services/Funnel/Benchmarks/EmailSequenceCompletedBenchmark.php:44
 #: app/Services/Funnel/Actions/RemoveFromEmailSequenceAction.php:41
 msgid "Select Sequences"
 msgstr ""
@@ -1302,12 +1448,11 @@ msgstr ""
 #: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:47
 #: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:48
 #: app/Services/Integrations/WishlistMember/WishlistMembershipTrigger.php:47
-#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:63
 #: app/Services/Integrations/TutorLms/CourseCompletedTrigger.php:47
 #: app/Services/Integrations/TutorLms/CourseEnrollTrigger.php:47
 #: app/Services/Integrations/MemberPress/MembershipTrigger.php:47
 #: app/Services/Integrations/MemberPress/SubscriptionExpiredTrigger.php:47
-#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:47
+#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:71
 #: app/Services/Funnel/Triggers/UserLoginTrigger.php:41
 msgid "Select Status"
 msgstr ""
@@ -1320,7 +1465,6 @@ msgstr ""
 
 #: app/Services/Integrations/CRM/TagAppliedTrigger.php:51
 #: app/Services/Integrations/CRM/RemoveFromTagTrigger.php:52
-#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:56
 #: app/Services/Funnel/Conditions/HasTagCondition.php:42
 msgid "Select Tags"
 msgstr ""
@@ -1383,7 +1527,7 @@ msgstr ""
 msgid "Select which sequences will be removed from this contact"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:284
+#: app/Http/Controllers/DynamicSegmentController.php:301
 msgid "Selected segment has been deleted"
 msgstr ""
 
@@ -1399,18 +1543,22 @@ msgstr ""
 msgid "Selected subscribers has been successfully removed from this sequence"
 msgstr ""
 
-#: app/Services/Integrations/LifterLms/LifterInit.php:168
-#: app/Services/Integrations/TutorLms/TutorLmsInit.php:138
+#: app/Services/Integrations/LifterLms/LifterInit.php:172
+#: app/Services/Integrations/TutorLms/TutorLmsInit.php:139
 msgid "Selected tags will be applied to the contact on course completion."
 msgstr ""
 
-#: app/Services/Integrations/LifterLms/LifterInit.php:155
-#: app/Services/Integrations/TutorLms/TutorLmsInit.php:124
+#: app/Services/Integrations/LifterLms/LifterInit.php:159
+#: app/Services/Integrations/TutorLms/TutorLmsInit.php:125
 msgid "Selected tags will be applied to the contact on course enrollment."
 msgstr ""
 
-#: app/Services/Integrations/LifterLms/LifterInit.php:211
+#: app/Services/Integrations/LifterLms/LifterInit.php:364
 msgid "Selected tags will be applied to the contact on lesson completed."
+msgstr ""
+
+#: app/Services/Integrations/LifterLms/LifterInit.php:230
+msgid "Selected tags will be applied to the contact on membership enrollment."
 msgstr ""
 
 #: app/Services/Funnel/Actions/SendCampaignEmailAction.php:24
@@ -1479,7 +1627,7 @@ msgstr ""
 msgid "Setup contact properties that you want to update"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:174
+#: app/Http/Controllers/DynamicSegmentController.php:191
 msgid "Should Match Both Open & Click Condition?"
 msgstr ""
 
@@ -1504,12 +1652,12 @@ msgstr ""
 msgid "Sorry! No emails found"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:275
+#: app/Http/Controllers/DynamicSegmentController.php:292
 msgid "Sorry! No segment found"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:111
-#: app/Hooks/Handlers/DataExporter.php:202
+#: app/Http/Controllers/DynamicSegmentController.php:128
+#: app/Hooks/Handlers/DataExporter.php:237
 msgid "Source"
 msgstr ""
 
@@ -1523,22 +1671,14 @@ msgid ""
 "will run yes blocks or no blocks"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:89
-#: app/Hooks/Handlers/DataExporter.php:196
+#: app/Http/Controllers/DynamicSegmentController.php:106
+#: app/Hooks/Handlers/DataExporter.php:231
 #: app/Services/Funnel/Conditions/CheckUserPropCondition.php:108
 msgid "State"
 msgstr ""
 
-#: app/Hooks/Handlers/DataExporter.php:200
+#: app/Hooks/Handlers/DataExporter.php:235
 msgid "Status"
-msgstr ""
-
-#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:24
-msgid "Student Complete a Lesson"
-msgstr ""
-
-#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:41
-msgid "Student Complete a Lesson in LifterLMS"
 msgstr ""
 
 #: app/Services/Integrations/LifterLms/CourseCompletedTrigger.php:24
@@ -1562,7 +1702,7 @@ msgstr ""
 msgid "Student completes a Lesson in LifterLMS"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:104
+#: app/Http/Controllers/DynamicSegmentController.php:121
 #: app/Services/Integrations/RCP/RCPMembershipTrigger.php:46
 #: app/Services/Integrations/RCP/RCPMembershipCancelTrigger.php:46
 #: app/Services/Integrations/LifterLms/LessonCompletedTrigger.php:50
@@ -1583,12 +1723,11 @@ msgstr ""
 #: app/Services/Integrations/Edd/EddPaymentSuccessTrigger.php:46
 #: app/Services/Integrations/Edd/EddPaymentRefundTrigger.php:47
 #: app/Services/Integrations/WishlistMember/WishlistMembershipTrigger.php:46
-#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:62
 #: app/Services/Integrations/TutorLms/CourseCompletedTrigger.php:46
 #: app/Services/Integrations/TutorLms/CourseEnrollTrigger.php:46
 #: app/Services/Integrations/MemberPress/MembershipTrigger.php:46
 #: app/Services/Integrations/MemberPress/SubscriptionExpiredTrigger.php:46
-#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:46
+#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:70
 #: app/Services/Funnel/Triggers/UserLoginTrigger.php:40
 msgid "Subscription Status"
 msgstr ""
@@ -1602,8 +1741,8 @@ msgstr ""
 msgid "Tag Removed"
 msgstr ""
 
-#: app/Http/Controllers/DynamicSegmentController.php:129
-#: app/Hooks/Handlers/DataExporter.php:208
+#: app/Http/Controllers/DynamicSegmentController.php:146
+#: app/Hooks/Handlers/DataExporter.php:243
 msgid "Tags"
 msgstr ""
 
@@ -1635,7 +1774,6 @@ msgid "Target Lesson"
 msgstr ""
 
 #: app/Services/Integrations/LifterLms/LessonCompletedTrigger.php:85
-#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:88
 msgid "Target Lessons"
 msgstr ""
 
@@ -1691,16 +1829,16 @@ msgstr ""
 msgid "The %s license needs to be activated. %sActivate Now%s"
 msgstr ""
 
-#: app/Hooks/Handlers/DataExporter.php:161
+#: app/Hooks/Handlers/DataExporter.php:196
 msgid ""
 "The Block Action defined in the JSON file is not available on your site."
 msgstr ""
 
-#: app/Hooks/Handlers/DataExporter.php:134
+#: app/Hooks/Handlers/DataExporter.php:169
 msgid "The provided JSON file is not valid"
 msgstr ""
 
-#: app/Hooks/Handlers/DataExporter.php:145
+#: app/Hooks/Handlers/DataExporter.php:180
 msgid "The trigger defined in the JSON file is not available on your site."
 msgstr ""
 
@@ -1718,8 +1856,8 @@ msgstr ""
 msgid "This Funnel will be initiated when a user login to your site"
 msgstr ""
 
-#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:25
-#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:40
+#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:49
+#: app/Services/Integrations/AffiliateWP/AffiliateWPAffActiveTrigger.php:64
 msgid ""
 "This Funnel will be initiated when affiliate will be approved or register as "
 "direct approved"
@@ -1731,7 +1869,6 @@ msgid "This Funnel will start a student completes a Course"
 msgstr ""
 
 #: app/Services/Integrations/LearnDash/LessonCompletedTrigger.php:25
-#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:25
 msgid "This Funnel will start a student completes a lesson"
 msgstr ""
 
@@ -1813,7 +1950,6 @@ msgstr ""
 #: app/Services/Integrations/LifterLms/LessonCompletedTrigger.php:29
 #: app/Services/Integrations/LifterLms/LessonCompletedTrigger.php:44
 #: app/Services/Integrations/LearnDash/LessonCompletedTrigger.php:40
-#: app/Services/Integrations/TutorLms/LessonCompletedTrigger.php:42
 msgid "This Funnel will start when a student completes a lesson"
 msgstr ""
 
@@ -1899,6 +2035,11 @@ msgid ""
 "WordPress users"
 msgstr ""
 
+#: app/Services/Funnel/Benchmarks/EmailSequenceCompletedBenchmark.php:24
+#: app/Services/Funnel/Benchmarks/EmailSequenceCompletedBenchmark.php:38
+msgid "This will run once a selected email sequence is completed for a contact"
+msgstr ""
+
 #: app/Services/Funnel/Benchmarks/LinkClickBenchmark.php:36
 #: app/Services/Funnel/Benchmarks/LinkClickBenchmark.php:51
 msgid "This will run once a subscriber click on this provided link"
@@ -1945,11 +2086,11 @@ msgstr ""
 msgid "This will run when selected Tags have been removed from a contact"
 msgstr ""
 
-#: app/Hooks/Handlers/DataExporter.php:191
+#: app/Hooks/Handlers/DataExporter.php:226
 msgid "Timezone"
 msgstr ""
 
-#: app/Hooks/Handlers/DataExporter.php:187
+#: app/Hooks/Handlers/DataExporter.php:222
 msgid "Title"
 msgstr ""
 
@@ -1989,7 +2130,11 @@ msgstr ""
 msgid "Update WP User Meta"
 msgstr ""
 
-#: app/Hooks/Handlers/DataExporter.php:186
+#: app/Hooks/Handlers/DataExporter.php:241
+msgid "Updated At"
+msgstr ""
+
+#: app/Hooks/Handlers/DataExporter.php:221
 msgid "User ID"
 msgstr ""
 

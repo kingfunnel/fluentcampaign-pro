@@ -66,7 +66,10 @@ class CustomSegment extends BaseSegment
         $segment = $item->value;
         $segment = wp_parse_args($segment, $this->getInfo());
         $segment['id'] = $item->id;
-        $segment['contact_count'] = $this->getContactCount($segment);
+
+        if(Arr::get($config, 'contact_count')) {
+            $segment['contact_count'] = $this->getCount();
+        }
 
         if (Arr::get($config, 'model')) {
             $segment['model'] = $this->getModel($segment);
@@ -198,7 +201,7 @@ class CustomSegment extends BaseSegment
                 continue;
             }
             if ($condition['operator'] == 'whereIn' || $condition['operator'] == 'whereNotIn') {
-                if (!$condition['value'] || !is_array($condition['value'])) {
+                if (empty($condition['value']) || !is_array($condition['value'])) {
                     continue;
                 }
             }

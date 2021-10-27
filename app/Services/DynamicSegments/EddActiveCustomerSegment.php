@@ -59,7 +59,11 @@ class EddActiveCustomerSegment extends BaseSegment
         if(Arr::get($config, 'subscribers')) {
             $segment['subscribers'] = $this->getSubscribers($config);
         }
-        $segment['contact_count'] = $this->getCount();
+
+        if(Arr::get($config, 'contact_count')) {
+            $segment['contact_count'] = $this->getCount();
+        }
+
         return $segment;
     }
 }

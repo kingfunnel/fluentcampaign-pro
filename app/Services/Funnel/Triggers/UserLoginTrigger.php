@@ -122,7 +122,7 @@ class UserLoginTrigger extends BaseTrigger
         // check update_type
         $updateType = Arr::get($conditions, 'update_type');
 
-        $subscriber = FunnelHelper::getSubscriber($user->email);
+        $subscriber = FunnelHelper::getSubscriber($user->user_email);
         if ($updateType == 'skip_all_if_exist' && $subscriber) {
             return false;
         }

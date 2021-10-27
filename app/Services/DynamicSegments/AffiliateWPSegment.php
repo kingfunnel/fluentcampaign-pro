@@ -56,7 +56,11 @@ class AffiliateWPSegment extends BaseSegment
         if(Arr::get($config, 'model')) {
             $segment['model'] = $this->getModel($segment);
         }
-        $segment['contact_count'] = $this->getCount();
+
+        if(Arr::get($config, 'contact_count')) {
+            $segment['contact_count'] = $this->getCount();
+        }
+
         return $segment;
     }
 }

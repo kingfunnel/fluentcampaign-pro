@@ -25,36 +25,6 @@ class Helper
     }
 
 
-    public static function getLessonsByCourseGroup()
-    {
-        $courses = get_posts(array(
-            'post_type'   => 'course',
-            'numberposts' => -1
-        ));
-
-        $groups = [];
-        foreach ($courses as $course) {
-            $group = [
-                'title'   => $course->post_title,
-                'slug'    => $course->post_name . '_' . $course->ID,
-                'options' => []
-            ];
-
-            $lmsCourse = llms_get_post($course->ID);
-
-            $lessons = $lmsCourse->get_lessons('posts');
-
-            foreach ($lessons as $lesson) {
-                $group['options'][] = [
-                    'id'    => strval($lesson->ID),
-                    'title' => $lesson->post_title
-                ];
-            }
-            $groups[] = $group;
-        }
-        return $groups;
-    }
-
     public static function isInCourses($courseIds, $subscriber)
     {
         if (!$courseIds) {
@@ -84,6 +54,21 @@ class Helper
         return false;
     }
 
+    public static function getUserCourses($userId)
+    {
+        $courses = wpFluent()->table('posts')
+            ->select(['post_parent'])
+            ->where('post_type', 'tutor_enrolled')
+            ->where('post_author', $userId)
+            ->get();
+
+        $courseIds = [];
+        foreach ($courses as $course) {
+            $courseIds[] = $course->post_parent;
+        }
+
+        return $courseIds;
+    }
 
     public static function createContactFromTutor($userId, $tags = [])
     {

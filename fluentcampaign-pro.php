@@ -3,7 +3,7 @@
 Plugin Name:  FluentCRM Pro
 Plugin URI:   https://fluentcrm.com
 Description:  Pro Email Automation and Integration Addon for FluentCRM
-Version:      2.2.0
+Version:      2.3.1
 Author:       Fluent CRM
 Author URI:   https://fluentcrm.com
 License:      GPL2
@@ -39,5 +39,4 @@ add_action('wpmu_new_blog', function ($blogId) {
 add_action('init', function () {
     load_plugin_textdomain('fluentcampaign-pro', false, dirname(plugin_basename(__FILE__)) . '/languages');
 });
-
 

@@ -38,7 +38,7 @@ class RCPIsInMembership extends BaseCondition
                     'type'        => 'multi-select',
                     'label'       => __('Target Levels', 'fluentcampaign-pro'),
                     'help'        => __('Select Which Level you want to match for this conditional split', 'fluentcampaign-pro'),
-                    'options'     => $this->getMembershipLevels(),
+                    'options'     => Helper::getMembershipLevels(),
                     'inline_help' => __('If the contact is in any of the selected levels then the result will be as YES', 'fluentcampaign-pro')
                 ]
             ]
@@ -52,21 +52,6 @@ class RCPIsInMembership extends BaseCondition
         $isTrue = $this->isInLevel($subscriber, $levelIds);
 
         (new FunnelProcessor())->initChildSequences($sequence, $isTrue, $subscriber, $funnelSubscriberId, $funnelMetric);
-    }
-
-    private function getMembershipLevels()
-    {
-        $memberships = \rcp_get_subscription_levels();
-
-        $formattedLevels = [];
-        foreach ($memberships as $membership) {
-            $formattedLevels[] = [
-                'id' => strval($membership->id),
-                'title' => $membership->name
-            ];
-        }
-
-        return $formattedLevels;
     }
 
     private function isInLevel($subscriber, $levelIds)

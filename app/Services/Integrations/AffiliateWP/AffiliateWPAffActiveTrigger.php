@@ -2,6 +2,7 @@
 
 namespace FluentCampaign\App\Services\Integrations\AffiliateWP;
 
+use FluentCrm\App\Models\Funnel;
 use FluentCrm\App\Services\Funnel\BaseTrigger;
 use FluentCrm\App\Services\Funnel\FunnelHelper;
 use FluentCrm\App\Services\Funnel\FunnelProcessor;
@@ -15,6 +16,29 @@ class AffiliateWPAffActiveTrigger extends BaseTrigger
         $this->priority = 10;
         $this->actionArgNum = 3;
         parent::__construct();
+
+        add_action('affwp_process_register_form', function () {
+            // This happens before the init which is actually plugins_loaded
+            // AffiliateWP could handle this better way and fire the hook at init
+            add_action('affwp_set_affiliate_status', function ($affId, $status) {
+                $funnels = Funnel::where('status', 'published')
+                    ->where('trigger_name', 'affwp_set_affiliate_status')
+                    ->get();
+
+                $originalArgs = [
+                    $affId,
+                    $status
+                ];
+
+                foreach ($funnels as $funnel) {
+                    ob_start();
+                    do_action('fluentcrm_funnel_start_affwp_set_affiliate_status', $funnel, $originalArgs);
+                    $maybeErrors = ob_get_clean();
+                }
+            }, 10, 2);
+        });
+
+        //add_filter('fluentcrm_smartcode_fallback_callback_affiliatewp', array($this, 'parseSmartcode'), 10, 4);
     }
 
     public function getTrigger()
@@ -83,20 +107,20 @@ class AffiliateWPAffActiveTrigger extends BaseTrigger
         $affiliateId = $originalArgs[0];
         $newStatus = $originalArgs[1];
         if ($newStatus != 'active') {
-            return;
+            return false;
         }
 
         $affiliate = affwp_get_affiliate($affiliateId);
 
         $subscriberData = FunnelHelper::prepareUserData($affiliate->user_id);
         if (empty($subscriberData['email'])) {
-            return;
+            return false;
         }
 
         $willProcess = $this->isProcessable($funnel, $subscriberData);
         $willProcess = apply_filters('fluentcrm_funnel_will_process_' . $this->triggerName, $willProcess, $funnel, $subscriberData, $originalArgs);
         if (!$willProcess) {
-            return;
+            return false;
         }
 
         $subscriberData = wp_parse_args($subscriberData, $funnel->settings);
@@ -127,5 +151,22 @@ class AffiliateWPAffActiveTrigger extends BaseTrigger
         }
 
         return true;
+    }
+
+    public function parseSmartCode($value, $valueKey, $defaultValue, $subscriber)
+    {
+        // allowed valuekeys
+        $validKeys = [
+            'affiliate_id',
+            'status',
+            'earnings',
+            'unpaid_earnings',
+            'referrals',
+            'visits',
+            'date_registered'
+        ];
+
+
+
     }
 }

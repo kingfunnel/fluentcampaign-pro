@@ -13,6 +13,7 @@ use FluentCampaign\App\Services\Funnel\Actions\SendCampaignEmailAction;
 use FluentCampaign\App\Services\Funnel\Actions\UpdateContactPropertyAction;
 use FluentCampaign\App\Services\Funnel\Actions\UpdateUserMetaAction;
 use FluentCampaign\App\Services\Funnel\Actions\UserRegistrationAction;
+use FluentCampaign\App\Services\Funnel\Benchmarks\EmailSequenceCompletedBenchmark;
 use FluentCampaign\App\Services\Funnel\Benchmarks\LinkClickBenchmark;
 use FluentCampaign\App\Services\Funnel\Conditions\CheckUserPropCondition;
 use FluentCampaign\App\Services\Funnel\Conditions\HasListCondition;
@@ -66,6 +67,7 @@ class IntegrationHandler
     private function initBenchmarks()
     {
         new LinkClickBenchmark();
+        new EmailSequenceCompletedBenchmark();
     }
 
     public function maybeAutoAlterTags($userId, $newRole)

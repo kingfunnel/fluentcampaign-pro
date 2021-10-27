@@ -6,12 +6,15 @@ class Bootstrap
 {
     public function init()
     {
-        if(!class_exists('\ElementorPro\Plugin')) {
-            return;
-        }
-        $formModule = \ElementorPro\Plugin::instance()->modules_manager->get_modules( 'forms' );
-        $formWidget = new FormWidget();
-        // Register the action with form widget
-        $formModule->add_form_action( $formWidget->get_name(), $formWidget );
+        add_action('init', function () {
+            if(!class_exists('\ElementorPro\Plugin') || apply_filters('fluentcrm_disable_elementor_form', false)) {
+                return;
+            }
+
+            $formModule = \ElementorPro\Plugin::instance()->modules_manager->get_modules( 'forms' );
+            $formWidget = new FormWidget();
+            // Register the action with form widget
+            $formModule->add_form_action( $formWidget->get_name(), $formWidget );
+        });
     }
 }

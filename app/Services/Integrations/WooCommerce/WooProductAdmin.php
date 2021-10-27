@@ -11,27 +11,21 @@ class WooProductAdmin
 
     public function init()
     {
+        if (!apply_filters('fluentcrm_disable_integration_metaboxes', false, 'woocommerce')) {
+            /*
+             * Admin Product Edit Page Actions
+             */
+            add_action('woocommerce_product_write_panel_tabs', array($this, 'addPanelTitle'));
+            add_action('woocommerce_product_data_panels', array($this, 'addPanelInputs'));
+            add_action('save_post_product', array($this, 'saveMetaData'));
 
-        $usingWpFusion = apply_filters('fluentcrm_using_wpfusion', defined('WP_FUSION_VERSION'));
-
-        if ($usingWpFusion || apply_filters('fluentcrm_disable_woo_admin_integration', false)) {
-            return false;
+            /*
+             * order success actions
+             */
+            add_action('woocommerce_order_status_processing', array($this, 'applyOrderTags'), 10, 2);
+            add_action('woocommerce_order_status_completed', array($this, 'applyOrderTags'), 10, 2);
+            add_action('woocommerce_order_status_refunded', array($this, 'applyRefundTags'), 10, 1);
         }
-
-        /*
-         * Admin Product Edit Page Actions
-         */
-        add_action('woocommerce_product_write_panel_tabs', array($this, 'addPanelTitle'));
-        add_action('woocommerce_product_data_panels', array($this, 'addPanelInputs'));
-        add_action('save_post_product', array($this, 'saveMetaData'));
-
-        /*
-         * order success actions
-         */
-        add_action('woocommerce_order_status_processing', array($this, 'applyOrderTags'), 10, 2);
-        add_action('woocommerce_order_status_completed', array($this, 'applyOrderTags'), 10, 2);
-        add_action('woocommerce_order_status_refunded', array($this, 'applyRefundTags'), 10, 1);
-
     }
 
     public function addPanelTitle()

@@ -13,13 +13,14 @@ class TutorLmsInit
         new CourseEnrollTrigger();
         new CourseCompletedTrigger();
         new TutorCoursePurchased();
+
+        new TutorImporter();
+
         // push profile section
         add_filter('fluentcrm_profile_sections', array($this, 'pushCoursesOnProfile'));
         add_filter('fluencrm_profile_section_tutor_profile_courses', array($this, 'pushCoursesContent'), 10, 2);
-
-
-        $usingWpFusion = apply_filters('fluentcrm_using_wpfusion', defined('WP_FUSION_VERSION'));
-        if (!$usingWpFusion) {
+        
+        if (!apply_filters('fluentcrm_disable_integration_metaboxes', false, 'tutorlms')) {
             /*
             * Course metabox and settings
             */

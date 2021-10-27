@@ -34,9 +34,10 @@ class WpUserSegment extends BaseSegment
         if($this->model) {
             return $this->model;
         }
-        
+
         $this->model = Subscriber::whereNotNull('user_id')
                     ->where('status', 'subscribed');
+
         return $this->model;
     }
 
@@ -51,7 +52,10 @@ class WpUserSegment extends BaseSegment
         if(Arr::get($config, 'subscribers')) {
             $segment['subscribers'] = $this->getSubscribers($config);
         }
-        $segment['contact_count'] = $this->getCount();
+        if(Arr::get($config, 'contact_count')) {
+            $segment['contact_count'] = $this->getCount();
+        }
+
         return $segment;
     }
 }

@@ -239,7 +239,7 @@ class HTTPSendDataAction extends BaseAction
             $code = Arr::get($response, 'response.code');
             $message = $response->get_error_message() . ', with response code: ' . $code . ' - ' . (int)$response->get_error_code();
             FunnelMetric::where('id', $data['metric_id'])
-                ->update('note', $message);
+                ->update(['note' => $message]);
             FunnelHelper::changeFunnelSubSequenceStatus($data['funnel_sub_id'], $data['sequence_id'], 'skipped');
             return false;
         }
@@ -250,7 +250,7 @@ class HTTPSendDataAction extends BaseAction
         }
         if(is_string($responseBody)) {
             FunnelMetric::where('id', $data['metric_id'])
-                ->update('note', $responseBody);
+                ->update(['note' => $responseBody]);
         }
 
         FunnelHelper::changeFunnelSubSequenceStatus($data['funnel_sub_id'], $data['sequence_id']);
